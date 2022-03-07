@@ -6,7 +6,7 @@ order: 3
 live: null
 source: https://github.com/coherentnonsense/drifting-forest
 tags: projects
-layout: padded
+layout: project
 ---
 
 WIP

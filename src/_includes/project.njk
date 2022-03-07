@@ -1,0 +1,16 @@
+---
+layout: base
+---
+<main id="project">
+  <div id="banner-img">
+    <img src="/project_thumbnails/{{ name | slugify }}.gif">
+    <h1>{{ name }}</h1>
+  </div>
+  <div class="content action-button-list">
+    <a href="{{ live }}" class="live"><div>Live</div></a>
+    <a href="{{ source }}" class="live"><div>Source</div></a>
+  </div>
+  <article class="content">
+    {{ content | safe }}
+  </article>
+</main>
