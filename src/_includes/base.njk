@@ -6,10 +6,10 @@ title: Coherent Nonsense
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/markdown.css" />
+    <link rel="stylesheet" href="{{ '/css/styles.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/css/markdown.css' | url }}" />
 
-    <link rel="stylesheet" href="/prism/default.css" />
+    <link rel="stylesheet" href="{{ '/prism/default.css' | url }}" />
   <body>
     {% include "header.njk" %}
     
