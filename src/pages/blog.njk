@@ -1,0 +1,13 @@
+---
+layout: padded
+permalink: /blog/
+---
+<ul id="blog-list">
+  {%- for post in collections.blog | reverse -%}
+  <li class="blog-item">
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+    <p class="date">{{ post.date | formatDate }}</p>
+    <p class="desc">{{ post.templateContent | striptags(true) | truncate(150) }}</p>
+  </li>
+  {%- endfor -%}
+</ul>

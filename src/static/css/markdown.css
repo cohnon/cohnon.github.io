@@ -1,0 +1,100 @@
+#blog-post h1 {
+  color: var(--green);
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+#blog-post .date {
+  margin-bottom: 1em;
+  font-size: 0.9em;
+}
+
+#blog-post hr {
+  margin-bottom: 2em;
+}
+
+#blog-post h3 {
+  margin: 2em 0 1em 0;
+}
+
+#blog-post h2 {
+  margin: 2em 0 1em 0;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+#blog-post p {
+  line-height: 2em;
+  margin-bottom: 1em;
+  font-size: 18px;
+}
+
+#blog-post ul, #blog-post ol {
+  margin: 10px 0 20px 1em;
+}
+
+#blog-post li {
+  margin-bottom: 10px;;
+}
+
+#blog-post table {
+  background-color: #000;
+  margin: 2em 0;
+}
+
+#blog-post thead {
+  color: #fff;
+}
+
+#blog-post th {
+  padding: 5px 10px;
+}
+
+#blog-post td {
+  padding: 5px 10px;
+  text-align: center;
+}
+
+#blog-post tbody {
+  background: #eee;
+}
+
+#blog-post blockquote {
+  border-left: 5px solid var(--green);
+  padding-left: 1em;
+}
+
+#blog-post pre {
+  margin: 2em 0;
+}
+
+#blog-post code, #blog-post code span {
+  font-family: 'Consolas', monospace;
+  font-size: 16px;
+}
+
+.header-anchor {
+  color: #333;
+  position: relative;
+}
+
+.header-anchor:hover {
+  text-decoration: none;
+}
+
+.header-anchor::before {
+  content: '¶';
+  position: absolute;
+  left: -10px;
+  transform: translate(-100%, 0);
+  display: none;
+  color: var(--green);
+}
+
+.header-anchor:hover::before {
+  display: block;
+}
+
+#blog-post .bottom {
+  margin-top: 5em;
+}

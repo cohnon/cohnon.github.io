@@ -1,0 +1,29 @@
+---
+layout: padded
+permalink: /projects/
+---
+{%- for project in collections.projects | sortByOrder -%}
+  <div id="{{ project.data.name | slugify }}" class="project-preview" >
+    <div class="details">
+      <h3>
+        <a href="{{ project.url }}">
+          {{ project.data.name }}
+        </a>
+      </h3>
+      <div class="tag-list">
+        {%- for tool in project.data.tools -%}
+          <p>{{ tool }}</p>
+        {%- endfor -%}
+      </div>
+      <p class="desc">{{ project.data.desc }}</p>
+      <div class="action-button-list">
+        <a href="{{ project.data.live }}" target="_blank" class="live">
+          <div>Live</div>
+        </a>
+      </div>
+    </div>
+    <a href="{{ project.url }}" class="thumbnail">
+      <img src="/project_thumbnails/{{ project.data.name | slugify }}.gif" alt="Thumbnail for {{ project.data.name }}" />
+    </a>
+  </div>
+{%- endfor -%}

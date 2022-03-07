@@ -1,0 +1,12 @@
+---
+layout: padded
+---
+<article id="blog-post">
+  <h1>{{ title }}</h1>
+  <p class="date">{{ date | formatDate }}</p>
+  <hr>
+  {{ content | safe }}
+  <div class="bottom">
+    <a href="/blog/">← Back to all posts</a>
+  </div>
+</article>
