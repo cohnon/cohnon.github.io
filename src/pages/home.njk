@@ -10,7 +10,7 @@ about: Making games, websites, and all things programming.
       {{ about }}
     </p>
     <ul id="project-showcase">
-      {%- for project in collections.projects | reverse | head(2) -%}
+      {%- for project in collections.projects | sortByOrder | head(2) -%}
       <a href="{{ project.url }}" class="project" >
         <img src="/project_thumbnails/{{ project.data.name | slugify }}.gif" alt="Thumbnail for {{ project.data.name }}" />
         <h2>{{ project.data.name }}</h2>
