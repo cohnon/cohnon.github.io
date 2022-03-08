@@ -114,3 +114,9 @@ article code, article code span {
 article .bottom {
   margin-top: 5em;
 }
+
+article form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
