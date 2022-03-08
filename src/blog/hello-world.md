@@ -1,8 +1,9 @@
 ---
 title: Hello World
 date: 2022-03-06
-tags: blog
-layout: blog_post
+tags:
+  - meta
+  - personal
 ---
 How exciting.
 
@@ -57,6 +58,10 @@ Wow this is a whole new area
 > > And even more blocky and quotier quotes
 >
 > amazing
+
+Here's a kitten
+
+![Picture of a kitten](/img/hello-world/kitten.png)
 
 and now for the next chapter...
 

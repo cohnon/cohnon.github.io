@@ -1,9 +1,14 @@
 ---
 layout: padded
 ---
-<article id="blog-post">
+<article>
   <h1>{{ title }}</h1>
   <p class="date">{{ date | formatDate }}</p>
+  <div class="tag-list">
+    {%- for tagItem in tags | filterTagList -%}
+      <a href="/blog/tags/{{ tagItem | slugify }}/" class="tag-item">{{ tagItem }}</a>
+    {%- endfor -%}
+  </div>
   <hr>
   {{ content | safe }}
   <div class="bottom">

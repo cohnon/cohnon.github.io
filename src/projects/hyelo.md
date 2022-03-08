@@ -1,12 +1,10 @@
 ---
 name: Hyelo
 desc: An omegle clone with actual features.
-tags: projects
-order: 1
+tools: [Javascript, Node]
 live: https://hyelo.herokuapp.com/
 source: https://github.com/coherentnonsense/hyelo
-tools: [Javascript, Node]
-layout: project
+order: 1
 ---
 A minimal chat application.
 

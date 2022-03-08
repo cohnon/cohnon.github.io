@@ -1,12 +1,10 @@
 ---
 name: Trist
 desc: An anonymous social network.
-tags: projects
-order: 2
+tools: [MERN Stack, WebSockets]
 live: https://tristchat.herokuapp.com/
 source: https://github.com/coherentnonsense/trist
-tools: [MongoDb, Express, React, Node, WebSockets]
-layout: project
+order: 2
 ---
 I took the idea of Omegle and added social media features such as friends, direct messages, custom profiles, and group servers.
 

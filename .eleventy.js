@@ -25,8 +25,12 @@ function head(array, n) {
   return array.slice(0, n);
 }
 
+function filterTagList(tags) {
+  return (tags || []).filter(tag => ["all", "blog", "projects"].indexOf(tag) === -1);
+}
+
 module.exports = function(config) {
-  const markdownLib = markdownIt()
+  const markdownLib = markdownIt({ html: true })
   .use(markdownItAnchor, {
     level: 2,
     permalink: markdownItAnchor.permalink.headerLink({ safariReaderFix: true }),
@@ -39,6 +43,7 @@ module.exports = function(config) {
   config.addFilter("sortByOrder", sortByOrder);
   config.addFilter("formatDate", formatDate);
   config.addFilter("head", head);
+  config.addFilter("filterTagList", filterTagList)
   
   return {
     dir: {

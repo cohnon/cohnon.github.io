@@ -12,7 +12,7 @@ permalink: /projects/
       </h3>
       <div class="tag-list">
         {%- for tool in project.data.tools -%}
-          <p>{{ tool }}</p>
+          <a>{{ tool }}</a>
         {%- endfor -%}
       </div>
       <p class="desc">{{ project.data.desc }}</p>

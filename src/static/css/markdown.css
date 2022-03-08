@@ -6,7 +6,19 @@ article h1 {
 
 article .date {
   margin-bottom: 1em;
+  font-size: 16px;
+}
+
+article .tag-list {
+  margin-bottom: 1em;
+}
+
+article .tag-list a {
   font-size: 0.9em;
+}
+
+article .tag-list a:hover {
+  font-size: 1em;
 }
 
 article hr {
@@ -35,6 +47,10 @@ article ul, article ol {
 
 article li {
   margin-bottom: 10px;;
+}
+
+article img {
+  max-width: 100%;
 }
 
 article table {
