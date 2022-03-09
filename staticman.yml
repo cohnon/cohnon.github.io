@@ -69,7 +69,7 @@ comments:
   # Destination path (directory) for the data files. Accepts placeholders.
   path: "src/_data/comments/{options.slug}"
 
-  transform:
+  transforms:
     message: frontmatterContent
 
   # Names of required fields. If any of these isn't in the request or is empty,
