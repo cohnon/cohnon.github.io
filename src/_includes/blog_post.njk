@@ -19,27 +19,50 @@ layout: padded
 <section id="comments">
   <div class="header">
     <h2>Comments</h2>
-    <button id="add-comment">Add Comment</button>
+    <button id="add-comment" class="button">Add Comment</button>
+  </div>
+  <div id="root-form">
+    <form id="comment-form" method="POST" action="https://cohnon-staticman.herokuapp.com/v2/entry/coherentnonsense/coherentnonsense.github.io/main/comments">
+      <div class="header">
+        <h3>Add Comment</h3>
+        <button type="button" id="cancel-comment" class="link">cancel</button>
+      </div>
+      <input type="hidden" id="comment-parent-id" name="fields[parent]" value="">
+      <input name="options[slug]" type="hidden" value="{{ page.fileSlug }}">
+      <label><div>Name</div><input name="fields[name]" type="text"></label>
+      <label><div>Message</div><textarea name="fields[message]"></textarea></label>
+      
+      <button type="submit" class="button">Submit</button>
+    </form>
   </div>
   {% if comments[page.fileSlug] %}
   <ul id="comment-list">
-    {% for _, comment in comments[page.fileSlug] %}
-      <li id="{{ comment._id }}">
+    {% for comment in comments[page.fileSlug] | objToArray | parent("") %}
+      <li id="{{ comment._id }}" class="root comment">
         <div>
           <span class="n">{{ comment.name }}</span> <span class="d">{{ comment.date | formatDate }}</span>
         </div>
         <p class="m">{{ comment.message }}</p>
+        <button class="r reply-comment">↪︎ Reply to {{ comment.name }}</button>
+        <div class="reply-list">
+          <ul>
+            {% for reply in comments[page.fileSlug] | objToArray | parent(comment._id) %}
+            <li id="{{ reply._id }}" class="comment">
+              <div>
+                <span class="n">{{ reply.name }}</span> <span class="d">{{ reply.date | formatDate }}</span>
+              </div>
+              <p class="m">{{ reply.message }}</p>
+              <!-- <button class="r reply-comment">↪︎ Reply to {{ comment.name }}</button> -->
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
       </li>
     {% endfor %}
   </ul>
   {% else %}
     <p style="margin-top: 1em;">No Comments</p>
   {% endif %}
-  <!-- <form method="POST" action="https://cohnon-staticman.herokuapp.com/v2/entry/coherentnonsense/coherentnonsense.github.io/main/comments">
-    <input name="options[slug]" type="hidden" value="{{ page.fileSlug }}">
-    <label><div>Name</div><input name="fields[name]" type="text"></label>
-    <label><div>Message</div><textarea name="fields[message]"></textarea></label>
-    
-    <button type="submit">Go!</button>
-  </form> -->
 </section>
+
+<script src="/js/comments.js"></script>

@@ -9,6 +9,7 @@ module.exports = {
     odysee: 'https://odysee.com/',
     discord: 'https://discord.com/',
     youtube: 'https://www.youtube.com/channel/UCc3jA5i2WqZJxsUt7ETLkSA',
+    itchio: 'https://coherentnonsense.itch.io/',
   },
   contact: {
     email: 'cohnon@coherentnonsense.com',

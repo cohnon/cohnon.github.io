@@ -13,12 +13,26 @@
   scrollbar-width: thin;
 }
 
-a {
+button {
+  background: none;
+  border: none;
+  font-size: 16px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.link {
+  display: inline;
+}
+
+a, .link {
   color: var(--green);
   text-decoration: none;
 }
 
-a:hover {
+a:hover, .link:hover {
   text-decoration: underline;
 }
 
@@ -176,21 +190,33 @@ footer::before {
 .project {
   display: block;
   position: relative;
-  border-radius: 5px;
+  border-radius: 3px;
   text-align: center;
   overflow: hidden;
-  border: 1px solid black;
+  border: 1px solid #000;
   margin: 0 0 1em 0;
+  color: #000;
+}
+
+.project:hover {
+  text-decoration: none;
 }
 
 .project img {
   display: block;
   width: 100%;
   transition: all 100ms ease;
+  border-bottom: 1px solid #ddd;
 }
 
 .project h2 {
-  margin: 10px 0;
+  margin: 10px 0 1em 0;
+  font-size: 1.3em;
+}
+
+.project p {
+  margin-bottom: 1em;
+  color: #777;
 }
 
 .project .view {
@@ -362,7 +388,7 @@ footer::before {
   overflow: hidden;
   border-bottom: 1px solid black;
   position: relative;
-  margin-bottom: 4em;
+  margin-bottom: 1em;
   max-height: 80vh;
 }
 #banner-img h1 {
@@ -425,23 +451,25 @@ footer::before {
   margin-left: 1em;
 }
 
-#comments .header {
+.header {
   display: flex;
+  margin-bottom: 1em;
 }
 
-#add-comment {
-  background: none;
+.header button {
+  margin-left: 1em;
+}
+
+.button {
   font-size: 15px;
   border: 1px solid black;
   padding: 5px 10px;
-  margin-left: 1em;
   transition: all 100ms ease;
 }
 
-#add-comment:hover {
+.button:hover {
   color: white;
   background: var(--green);
-  cursor: pointer;
 }
 
 
@@ -465,13 +493,41 @@ footer::before {
 
 #comment-list .m {
   font-size: 18px;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#comment-list .r {
+  color: var(--green);
+  font-size: 14px;
+}
+
+form input, form textarea {
+  padding: 5px;
+  margin-bottom: 1em;
+  display: block;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form textarea {
+  padding: 10px 5px;
+  height: 10em;
+}
+
+form label div {
+  margin-bottom: 3px;
+}
+
+#comment-form {
+  padding: 1em 0;
+  margin-top: 1em;
+  display: none;
+}
+
+.reply-list {
+  margin: 1em 0;
+  padding-left: 4em;
 }
 
 /* CONTACT */
@@ -502,17 +558,11 @@ form {
     display: flex;
     justify-content: space-between;
   }
-  .project {
-    width: 49%;
-  }
 }
 
 @media (max-width: 650px) {
   #project-showcase {
     flex-direction: column;
-  }
-  .project {
-    width: 100%;
   }
   header div {
     flex-direction: column;
@@ -540,7 +590,10 @@ form {
   }
   .action-button-list {
     display: flex;
-    justify-content: space-around;
+  }
+  .action-button-list a {
+    width: 50%;
+    text-align: center;
   }
   #contact-list {
     flex-direction: column;

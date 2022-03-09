@@ -54,8 +54,8 @@ module.exports = function(config) {
     return obj ? Object.values(obj) : []
   });
   
-  config.addFilter('where', function(array, key, val) {
-    return array.filter(item => item[key] == val)
+  config.addFilter('parent', function(array, id) {
+    return array.filter(item => item['parent'] == id);
   });
   
   return {
