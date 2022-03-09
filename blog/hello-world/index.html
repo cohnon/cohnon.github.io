@@ -107,19 +107,28 @@ int main()
 <section id="comments">
   <div class="header">
     <h2>Comments</h2>
-    <button id="add-comment">Add Comment</button>
+    <button id="add-comment" class="button">Add Comment</button>
+  </div>
+  <div id="root-form">
+    <form id="comment-form" method="POST" action="https://cohnon-staticman.herokuapp.com/v2/entry/coherentnonsense/coherentnonsense.github.io/main/comments">
+      <div class="header">
+        <h3>Add Comment</h3>
+        <button type="button" id="cancel-comment" class="link">cancel</button>
+      </div>
+      <input type="hidden" id="comment-parent-id" name="fields[parent]" value="">
+      <input name="options[slug]" type="hidden" value="hello-world">
+      <label><div>Name</div><input name="fields[name]" type="text"></label>
+      <label><div>Message</div><textarea name="fields[message]"></textarea></label>
+      
+      <button type="submit" class="button">Submit</button>
+    </form>
   </div>
   
     <p style="margin-top: 1em;">No Comments</p>
   
-  <!-- <form method="POST" action="https://cohnon-staticman.herokuapp.com/v2/entry/coherentnonsense/coherentnonsense.github.io/main/comments">
-    <input name="options[slug]" type="hidden" value="hello-world">
-    <label><div>Name</div><input name="fields[name]" type="text"></label>
-    <label><div>Message</div><textarea name="fields[message]"></textarea></label>
-    
-    <button type="submit">Go!</button>
-  </form> -->
 </section>
+
+<script src="/js/comments.js"></script>
 </main>
 
     <footer>
