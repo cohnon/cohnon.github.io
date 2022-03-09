@@ -1,15 +1,16 @@
 article h1 {
   color: var(--green);
-  font-size: 2em;
-  margin-bottom: 0.5em;
+  font-size: 2.2em;
 }
 
 article .date {
   margin-bottom: 1em;
-  font-size: 16px;
+  font-size: 18px;
+  color: #555;
 }
 
 article .tag-list {
+  justify-content: center;
   margin-bottom: 1em;
 }
 
@@ -21,7 +22,9 @@ article .tag-list a:hover {
   font-size: 1em;
 }
 
-article hr {
+hr {
+  border: none;
+  border-bottom: 1px solid #bbb;
   margin-bottom: 2em;
 }
 
@@ -42,7 +45,7 @@ article p {
 }
 
 article ul, article ol {
-  margin: 10px 0 20px 1em;
+  margin: 10px 0 20px 2em;
 }
 
 article li {
@@ -98,25 +101,17 @@ article code, article code span {
   text-decoration: none;
 }
 
-.header-anchor::before {
+.header-anchor::after {
   content: '¶';
-  position: absolute;
-  left: -10px;
-  transform: translate(-100%, 0);
   display: none;
   color: var(--green);
+  margin-left: 10px;
 }
 
-.header-anchor:hover::before {
-  display: block;
+.header-anchor:hover::after {
+  display: inline;
 }
 
 article .bottom {
-  margin-top: 5em;
-}
-
-article form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 5em 0 2em 0;
 }

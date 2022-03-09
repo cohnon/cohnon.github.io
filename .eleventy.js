@@ -10,8 +10,13 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
 function formatDate(date) {
-  const d = new Date(date);
-  return `${monthNames[d.getMonth()]} ${d.getDay() < 10 ? `0${d.getDate()}` : d.getDate()}, ${d.getFullYear()}`; 
+  let d;
+  if (typeof date === 'number') {
+    d = new Date(date * 1000);
+  } else {
+    d = new Date(date);
+  }
+  return `${monthNames[d.getMonth()]} ${d.getDate() < 10 ? `0${d.getDate()}` : d.getDate()}, ${d.getFullYear()}`; 
 }
 
 function head(array, n) {
@@ -44,6 +49,14 @@ module.exports = function(config) {
   config.addFilter("formatDate", formatDate);
   config.addFilter("head", head);
   config.addFilter("filterTagList", filterTagList)
+
+  config.addFilter('objToArray', function(obj) {
+    return obj ? Object.values(obj) : []
+  });
+  
+  config.addFilter('where', function(array, key, val) {
+    return array.filter(item => item[key] == val)
+  });
   
   return {
     dir: {

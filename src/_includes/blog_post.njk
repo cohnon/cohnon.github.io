@@ -11,15 +11,35 @@ layout: padded
   </div>
   <hr>
   {{ content | safe }}
-  <form method="POST" action="https://cohnon-staticman.herokuapp.com/v2/entry/coherentnonsense/coherentnonsense.github.io/main/comments">
-    <!-- e.g. "2016-01-02-this-is-a-post" -->
-    <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+  <div class="bottom">
+    <a href="/blog/">← Back to all posts</a>
+  </div>
+  <hr>
+</article>
+<section id="comments">
+  <div class="header">
+    <h2>Comments</h2>
+    <button id="add-comment">Add Comment</button>
+  </div>
+  {% if comments[page.fileSlug] %}
+  <ul id="comment-list">
+    {% for _, comment in comments[page.fileSlug] %}
+      <li id="{{ comment._id }}">
+        <div>
+          <span class="n">{{ comment.name }}</span> <span class="d">{{ comment.date | formatDate }}</span>
+        </div>
+        <p class="m">{{ comment.message }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p style="margin-top: 1em;">No Comments</p>
+  {% endif %}
+  <!-- <form method="POST" action="https://cohnon-staticman.herokuapp.com/v2/entry/coherentnonsense/coherentnonsense.github.io/main/comments">
+    <input name="options[slug]" type="hidden" value="{{ page.fileSlug }}">
     <label><div>Name</div><input name="fields[name]" type="text"></label>
     <label><div>Message</div><textarea name="fields[message]"></textarea></label>
     
     <button type="submit">Go!</button>
-  </form>
-  <div class="bottom">
-    <a href="/blog/">← Back to all posts</a>
-  </div>
-</article>
+  </form> -->
+</section>
