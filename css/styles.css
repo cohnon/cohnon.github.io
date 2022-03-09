@@ -27,8 +27,11 @@ a:hover {
 }
 
 .content {
-  padding-left: 30%;
-  padding-right: 30%;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+  box-sizing: border-box;
   transition: padding 100ms ease;
 }
 
@@ -55,6 +58,9 @@ a:hover {
 
 header {
   border-bottom: 1px solid var(--border);
+}
+
+header div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -406,6 +412,7 @@ footer::before {
 }
 
 #tag-search {
+  display: flex;
   margin-bottom: 0.5em;
 }
 
@@ -415,6 +422,56 @@ footer::before {
   font-weight: normal;
   display: inline-block;
   font-size: 22px;
+  margin-left: 1em;
+}
+
+#comments .header {
+  display: flex;
+}
+
+#add-comment {
+  background: none;
+  font-size: 15px;
+  border: 1px solid black;
+  padding: 5px 10px;
+  margin-left: 1em;
+  transition: all 100ms ease;
+}
+
+#add-comment:hover {
+  color: white;
+  background: var(--green);
+  cursor: pointer;
+}
+
+
+#comment-list {
+  margin: 2em 0;
+}
+
+#comment-list li {
+  list-style: none;
+  margin-bottom: 2em;
+}
+
+#comment-list .n  {
+  font-weight: bold;
+  color: var(--green);
+}
+
+#comment-list .d {
+  font-family: 'Roboto Condensed';
+}
+
+#comment-list .m {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* CONTACT */
@@ -437,19 +494,7 @@ footer::before {
   margin-bottom: 1em;
 }
 
-
-@media (max-width: 1500px) {
-  .content {
-    padding-left: 20%;
-    padding-right: 20%;
-  }
-}
-
 @media (max-width: 1000px) {
-  .content {
-    padding-left: 5%;
-    padding-right: 5%; 
-  }
   #home aside {
     display: none;
   }
@@ -463,18 +508,13 @@ footer::before {
 }
 
 @media (max-width: 650px) {
-  .content {
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 1em;
-  }
   #project-showcase {
     flex-direction: column;
   }
   .project {
     width: 100%;
   }
-  header {
+  header div {
     flex-direction: column;
     padding-bottom: 10px;
   }

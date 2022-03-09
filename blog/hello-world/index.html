@@ -8,19 +8,21 @@
 
     <link rel="stylesheet" href="/prism/default.css" />
   <body>
-    <header id="header" class="content">
-  <a id="logo" href="/">
-    <p>Coherent</p>
-    <p class="highlight">Nonsense</p>
-  </a>
-  <nav>
-    <ul>
-      <li class=""><a href="/">Home</a></li>
-      <li class=""><a href="/projects">Projects</a></li>
-      <li class="active"><a href="/blog">Blog</a></li>
-      <li class=""><a href="/contact">Contact</a></li>
-    </ul>
-  </nav>
+    <header id="header">
+  <div class="content">
+    <a id="logo" href="/">
+      <p>Coherent</p>
+      <p class="highlight">Nonsense</p>
+    </a>
+    <nav>
+      <ul>
+        <li class=""><a href="/">Home</a></li>
+        <li class=""><a href="/projects">Projects</a></li>
+        <li class="active"><a href="/blog">Blog</a></li>
+        <li class=""><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
     
     <main class="content padded">
@@ -97,25 +99,36 @@ int main()
 <p>Perferendis architecto cumque odit quis expedita esse nam. Assumenda consectetur qui doloribus dolore dolor beatae nam ut. Amet architecto voluptatem magnam error eos molestias saepe. Eius repudiandae placeat sed adipisci sint nemo est nemo. Voluptas impedit asperiores maiores. Magnam unde provident blanditiis nobis est. Quisquam aliquam quisquam aspernatur vero. Similique dolores neque excepturi quas. Est placeat voluptatem a error quam consequatur hic corporis.</p>
 <p>Perferendis architecto cumque odit quis expedita esse nam. Assumenda consectetur qui doloribus dolore dolor beatae nam ut. Amet architecto voluptatem magnam error eos molestias saepe. Eius repudiandae placeat sed adipisci sint nemo est nemo. Voluptas impedit asperiores maiores. Magnam unde provident blanditiis nobis est.</p>
 
-  <form method="POST" action="https://cohnon-staticman.herokuapp.com/v2/entry/coherentnonsense/coherentnonsense.github.io/main/comments">
-    <!-- e.g. "2016-01-02-this-is-a-post" -->
-    <input name="options[slug]" type="hidden" value="">
+  <div class="bottom">
+    <a href="/blog/">← Back to all posts</a>
+  </div>
+  <hr>
+</article>
+<section id="comments">
+  <div class="header">
+    <h2>Comments</h2>
+    <button id="add-comment">Add Comment</button>
+  </div>
+  
+    <p style="margin-top: 1em;">No Comments</p>
+  
+  <!-- <form method="POST" action="https://cohnon-staticman.herokuapp.com/v2/entry/coherentnonsense/coherentnonsense.github.io/main/comments">
+    <input name="options[slug]" type="hidden" value="hello-world">
     <label><div>Name</div><input name="fields[name]" type="text"></label>
     <label><div>Message</div><textarea name="fields[message]"></textarea></label>
     
     <button type="submit">Go!</button>
-  </form>
-  <div class="bottom">
-    <a href="/blog/">← Back to all posts</a>
-  </div>
-</article>
+  </form> -->
+</section>
 </main>
 
-    <footer class="content">
-  <p>
-    Made with <a href="https://www.11ty.dev/">Eleventy</a>.
-    Source code can be found on <a href="https://github.com/coherentnonsense/portfolio">Github</a>.</p>
-  <p>updated on Wed Mar 09 2022</p>
+    <footer>
+  <div class="content">
+    <p>
+      Made with <a href="https://www.11ty.dev/">Eleventy</a>.
+      Source code can be found on <a href="https://github.com/coherentnonsense/portfolio">Github</a>.</p>
+    <p>updated on Wed Mar 09 2022</p>
+  </div>
 </footer>
 
     <script src="/prism/prism.js"></script>
