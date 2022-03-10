@@ -3,8 +3,9 @@ const comments = document.getElementsByClassName('root');
 const replies = document.getElementsByClassName('reply-comment');
 const submit = document.getElementById('submit-comment');
 const message = document.getElementById('form-message');
+let replyTo = '';
 document.getElementById('add-comment').onclick = () => {
-  document.getElementById('comment-parent-id').value = '';
+  replyTo = '';
   document.getElementById('root-form').appendChild(form);
   form.style.display = 'block';
   form.scrollIntoView({behavior: 'smooth'});
@@ -14,7 +15,7 @@ document.getElementById('cancel-comment').onclick = () => {
 }
 for (let i = 0; i < replies.length; ++i) {
   replies.item(i).onclick = (d) => {
-    parent.value = comments.item(i).id;
+    replyTo = comments.item(i).id;
     comments.item(i).appendChild(form);
     form.style.display = 'block';
     form.scrollIntoView({behavior:'smooth'});
@@ -24,15 +25,17 @@ form.onsubmit = async (e) => {
   e.preventDefault();
   const f = e.currentTarget;
   const url = f.action;
-  message.style.border = '';
   try {
     const formData = new FormData(f);
     const data = Object.fromEntries(formData.entries());
     if (data.message.length === 0) {
-      return message.style.border = '2px solid red';
+      message.style.border = '2px solid red';
+      return setTimeout(() => {
+        message.style.border = '';
+      }, 500);
     }
     const jsonData = JSON.stringify({
-      fields:{name:data.name, message:data.message, parent:data.parent},
+      fields:{name:data.name, message:data.message, parent:replyTo},
       options:{slug:data.slug}
     });
     submit.innerHTML = 'Sending...';
