@@ -17,6 +17,11 @@ layout: padded
   <hr>
 </article>
 <section id="comments">
+  <div id="modal">
+    <h1 id="modal-h"></h1>
+    <p id="modal-p"></p>
+    <button id="modal-close" class="button">Close</button>
+  </div>
   <div class="header">
     <h2>Comments</h2>
     <button id="add-comment" class="button">Add Comment</button>
@@ -27,12 +32,12 @@ layout: padded
         <h3>Add Comment</h3>
         <button type="button" id="cancel-comment" class="link">cancel</button>
       </div>
-      <input type="hidden" id="comment-parent-id" name="fields[parent]" value="">
-      <input name="options[slug]" type="hidden" value="{{ page.fileSlug }}">
-      <label><div>Name</div><input name="fields[name]" type="text"></label>
-      <label><div>Message</div><textarea name="fields[message]"></textarea></label>
+      <input type="hidden" id="comment-parent-id" name="parent" value="">
+      <input name="slug" type="hidden" value="{{ page.fileSlug }}">
+      <label><div>Message</div><textarea name="message" id="form-message"></textarea></label>
+      <label><div>Name (optional)</div><input name="name" type="text"></label>
       
-      <button type="submit" class="button">Submit</button>
+      <button type="submit" id="submit-comment" class="button">Submit</button>
     </form>
   </div>
   {% if comments[page.fileSlug] %}
