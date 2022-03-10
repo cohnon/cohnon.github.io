@@ -525,6 +525,41 @@ form label div {
   display: none;
 }
 
+#modal {
+  position: fixed;
+  background: #fff;
+  z-index: 10;
+  border: 1px solid black;
+  top: 50%;
+  left: 50%;
+  width: min(700px, 95vw);
+  border-radius: 5px;
+  padding: 1em;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
+  animation: modal 200ms ease forwards;
+  display: none;
+}
+
+#modal-h {
+  margin-bottom: 1em;
+}
+
+#modal-p {
+  margin-bottom: 2em;
+}
+
+@keyframes modal {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .reply-list {
   margin: 1em 0;
   padding-left: 4em;
