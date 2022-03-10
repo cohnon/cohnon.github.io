@@ -32,7 +32,6 @@ layout: padded
         <h3>Add Comment</h3>
         <button type="button" id="cancel-comment" class="link">cancel</button>
       </div>
-      <input type="hidden" id="comment-parent-id" name="parent" value="">
       <input name="slug" type="hidden" value="{{ page.fileSlug }}">
       <label><div>Message</div><textarea name="message" id="form-message"></textarea></label>
       <label><div>Name (optional)</div><input name="name" type="text"></label>
@@ -45,6 +44,9 @@ layout: padded
     {% for comment in comments[page.fileSlug] | objToArray | parent("") %}
       <li id="{{ comment._id }}" class="root comment">
         <div>
+          {% if comment.name == 'CoherentNonsense' %}
+            <span class="a">Author</span>
+          {% endif %}
           <span class="n">{{ comment.name }}</span> <span class="d">{{ comment.date | formatDate }}</span>
         </div>
         <p class="m">{{ comment.message }}</p>
