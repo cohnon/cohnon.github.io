@@ -41,7 +41,7 @@ layout: padded
   </div>
   {% if comments[page.fileSlug] %}
   <ul id="comment-list">
-    {% for comment in comments[page.fileSlug] | objToArray | parent("") %}
+    {% for comment in comments[page.fileSlug] | objToArray | parent("") | reverse %}
       <li id="{{ comment._id }}" class="root comment">
         <div>
           {% if comment.name == 'CoherentNonsense' %}
