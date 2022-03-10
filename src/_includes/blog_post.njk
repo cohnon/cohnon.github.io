@@ -47,7 +47,7 @@ layout: padded
           {% if comment.name == 'CoherentNonsense' %}
             <span class="a">Author</span>
           {% endif %}
-          <span class="n">{{ comment.name }}</span> <span class="d">{{ comment.date | formatDate }}</span>
+          <span class="n">{{ comment.name | default("Anonymous") }}</span> <span class="d">{{ comment.date | formatDate }}</span>
         </div>
         <p class="m">{{ comment.message }}</p>
         <button class="r reply-comment">↪︎ Reply to {{ comment.name }}</button>
@@ -56,7 +56,7 @@ layout: padded
             {% for reply in comments[page.fileSlug] | objToArray | parent(comment._id) %}
             <li id="{{ reply._id }}" class="comment">
               <div>
-                <span class="n">{{ reply.name }}</span> <span class="d">{{ reply.date | formatDate }}</span>
+                <span class="n">{{ reply.name | default("Anonymous") }}</span> <span class="d">{{ reply.date | formatDate }}</span>
               </div>
               <p class="m">{{ reply.message }}</p>
               <!-- <button class="r reply-comment">↪︎ Reply to {{ comment.name }}</button> -->

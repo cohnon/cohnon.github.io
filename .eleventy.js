@@ -57,6 +57,10 @@ module.exports = function(config) {
   config.addFilter('parent', function(array, id) {
     return array.filter(item => item['parent'] == id);
   });
+
+  config.addFilter('default', function(string, d) {
+    return string.length === 0 ? d : string;
+  });
   
   return {
     dir: {
