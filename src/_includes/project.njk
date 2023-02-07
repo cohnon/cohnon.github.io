@@ -3,15 +3,24 @@ layout: base
 ---
 <main id="project">
   <div id="banner-img">
-    <img src="/project_thumbnails/{{ name | slugify }}.gif">
+    {%- if is_png -%}
+      <img src="/project_thumbnails/{{ name | slugify }}.png">
+    {%- else -%}
+      <img src="/project_thumbnails/{{ name | slugify }}.gif">
+    {%- endif -%}
+
     <h1>{{ name }}</h1>
   </div>
   <div class="content">
     <div class="action-button-list">
-      <a href="{{ live }}" class="live"><div>Live</div></a>
+      {%- if live -%}
+        <a href="{{ live }}" class="live"><div>Site</div></a>
+      {%- endif -%}
       <a href="{{ source }}" class="live"><div>Source</div></a>
     </div>
+    <br>
     <div class="tag-list">
+      <p>Made with</p>
       {%- for tool in tools -%}
         <a>{{ tool }}</a>
       {%- endfor -%}

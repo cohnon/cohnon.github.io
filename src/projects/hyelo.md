@@ -4,7 +4,7 @@ desc: An omegle clone with actual features.
 tools: [Javascript, Node]
 live: https://hyelo.herokuapp.com/
 source: https://github.com/coherentnonsense/hyelo
-order: 1
+order: 3
 ---
 A minimal chat application.
 

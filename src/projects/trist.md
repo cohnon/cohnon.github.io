@@ -4,7 +4,7 @@ desc: An anonymous social network.
 tools: [MERN Stack, WebSockets]
 live: https://tristchat.herokuapp.com/
 source: https://github.com/coherentnonsense/trist
-order: 2
+order: 1
 ---
 I took the idea of Omegle and added social media features such as friends, direct messages, custom profiles, and group servers.
 

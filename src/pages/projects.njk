@@ -11,22 +11,29 @@ permalink: /projects/
         </a>
       </h3>
       <div class="tag-list">
+        <p>Made with</p>
         {%- for tool in project.data.tools -%}
           <a>{{ tool }}</a>
         {%- endfor -%}
       </div>
       <p class="desc">{{ project.data.desc }}</p>
       <div class="action-button-list">
-        <a href="{{ project.data.live }}" target="_blank" class="live">
-          <div>Live</div>
-        </a>
+        {%- if project.data.live -%}
+          <a href="{{ project.data.live }}" target="_blank" class="live">
+            <div>Site</div>
+          </a>
+        {%- endif -%}
         <a href="{{ project.data.source }}" target="_blank" class="live">
           <div>Source</div>
         </a>
       </div>
     </div>
     <a href="{{ project.url }}" class="thumbnail">
-      <img src="/project_thumbnails/{{ project.data.name | slugify }}.gif" alt="Thumbnail for {{ project.data.name }}" />
+      {%- if project.data.is_png -%}
+        <img src="/project_thumbnails/{{ project.data.name | slugify }}.png" alt="Thumbnail for {{ project.data.name }}" />
+      {%- else -%}
+        <img src="/project_thumbnails/{{ project.data.name | slugify }}.gif" alt="Thumbnail for {{ project.data.name }}" />
+      {%- endif -%}
     </a>
   </div>
 {%- endfor -%}
