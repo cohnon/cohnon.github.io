@@ -279,7 +279,6 @@ footer::before {
 }
 
 .icon-list {
-  margin-top: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -298,6 +297,8 @@ footer::before {
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
+  max-height: 200px;
+  overflow: hidden;
 }
 
 .project-preview .thumbnail {
@@ -322,6 +323,12 @@ footer::before {
 
 .tag-list {
   margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.tag-list p {
+  margin-right: 5px;
 }
 
 .tag-list a {
@@ -333,7 +340,8 @@ footer::before {
 }
 
 .tag-list a:hover {
-  font-size: 0.9em;
+  /* font-size: 0.9em; */
+  transform: scale(1.05) rotate(2deg);
   cursor: pointer;
   text-decoration: none;
 }
@@ -354,6 +362,7 @@ footer::before {
   padding: 3px 35px;
   display: inline-block;
   overflow: hidden;
+  margin-right: 5px;
 }
 
 .action-button-list .live div {
@@ -633,6 +642,7 @@ form label div {
   }
   .action-button-list a {
     width: 50%;
+    flex-grow: 1;
     text-align: center;
   }
   #contact-list {
