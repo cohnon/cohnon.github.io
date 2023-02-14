@@ -337,13 +337,14 @@ footer::before {
   padding: 3px 5px;
   margin-right: 2px;
   color: black;
+  position: relative;
 }
 
 .tag-list a:hover {
   /* font-size: 0.9em; */
-  transform: scale(1.05) rotate(2deg);
   cursor: pointer;
   text-decoration: none;
+  transform: translate(0, -1px);
 }
 
 .project-preview .desc {
@@ -363,6 +364,7 @@ footer::before {
   display: inline-block;
   overflow: hidden;
   margin-right: 5px;
+  transition: background-color 100ms ease;
 }
 
 .action-button-list .live div {
@@ -379,13 +381,17 @@ footer::before {
   text-align: center;
   z-index: -1;
   width: 100%;
-  top: -50%;
+  top: -55%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .action-button-list .live:hover div {
-  transform: translate(0, 100%);
+  transform: translate(0, 105%);
+}
+
+.action-button-list .live:hover {
+  background-color: #5aee7f;
 }
 
 #banner-img img {
