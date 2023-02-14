@@ -10,16 +10,11 @@ article .date {
 }
 
 article .tag-list {
-  justify-content: center;
   margin-bottom: 1em;
 }
 
 article .tag-list a {
   font-size: 0.9em;
-}
-
-article .tag-list a:hover {
-  font-size: 1em;
 }
 
 hr {
