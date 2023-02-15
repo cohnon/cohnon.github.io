@@ -82,6 +82,10 @@ article pre {
   margin: 2em 0;
 }
 
+article code {
+  color: var(--green);
+}
+
 article code, article code span {
   font-family: 'Consolas', monospace;
   font-size: 16px;

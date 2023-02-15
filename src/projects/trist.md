@@ -6,6 +6,9 @@ live: https://tristchat.herokuapp.com/
 source: https://github.com/coherentnonsense/trist
 order: 1
 ---
+
+**temporary case study**
+
 I took the idea of Omegle and added social media features such as friends, direct messages, custom profiles, and group servers.
 
 ## DDD
