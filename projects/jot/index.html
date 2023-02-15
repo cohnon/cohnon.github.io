@@ -36,7 +36,31 @@
       <p>Made with</p><a>C</a><a>OpenGL</a></div>
   </div>
   <article class="content">
-    <p>WIP</p>
+    <p><strong>temporary case study</strong></p>
+<p>When learning a language, we need some form of visual feedback to know that we're actually accomplishing something. Usually, that feedback is in the form of a print statement. This can get us pretty far into learning the concepts of a language. With a simple print statement, you can make a number guesser, hangman, or a multitude of other text-based games. These are fun to make, but there are limitations. What if you want to create a physics system? or a graphical game? Sooner or later, you will want to &quot;upgrade&quot; your basic text output with something more powerful. There are a lot of great options out there, but any library will have some documentation you will have to learn.</p>
+<p>I want Jot to be an upgrade that has as few required function calls possible. It keeps the simplicity of a basic &quot;printf&quot; but gives developers the tools to create much more visual program.</p>
+<h4 id="example.c" tabindex="-1"><a class="header-anchor" href="#example.c"><span>example.c</span></a></h4>
+<pre><code class="language-clike">#include &lt;jot/jot.h&gt;
+
+int main() {
+
+  // required (1)
+  open_window(&quot;Demo&quot;, 600, 300);
+
+  // required (2)
+  while (update_window()) {
+    
+    // printf like functions
+    clear_screen(0.0f, 0.0f, 0.0f);
+    fill_circle(300, 150, 100, 0.0f, 0.5f, 1.0f);
+  }
+
+  // technically not required but good practice (3)
+  close_window();
+
+  return 0;
+}
+</code></pre>
 
   </article>
 </main>
@@ -46,7 +70,7 @@
     <p>
       Made with <a href="https://www.11ty.dev/">Eleventy</a>.
       Source code can be found on <a href="https://github.com/coherentnonsense/portfolio">Github</a>.</p>
-    <p>updated on Tue Feb 14 2023</p>
+    <p>updated on Wed Feb 15 2023</p>
   </div>
 </footer>
 
