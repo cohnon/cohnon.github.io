@@ -4,9 +4,9 @@ layout: base
 <main id="project">
   <div id="banner-img">
     {%- if is_png -%}
-      <img src="/project_thumbnails/{{ name | slugify }}.png">
+      <img src="/project_thumbnails/{{ page.fileSlug }}.png">
     {%- else -%}
-      <img src="/project_thumbnails/{{ name | slugify }}.gif">
+      <img src="/project_thumbnails/{{ page.fileSlug }}.gif">
     {%- endif -%}
 
     <h1>{{ name }}</h1>

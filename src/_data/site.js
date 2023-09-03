@@ -13,6 +13,6 @@ module.exports = {
   },
   contact: {
     email: 'cohnon@coherentnonsense.com',
-    discord: 'CoherentNonsense#3937',
+    discord: 'cohnon',
   },
 };

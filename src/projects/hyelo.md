@@ -2,9 +2,9 @@
 name: Hyelo
 desc: An omegle clone with actual features.
 tools: [Javascript, Node]
-live: https://hyelo.herokuapp.com/
+live: null
 source: https://github.com/coherentnonsense/hyelo
-order: 3
+order: 2
 ---
 
 **temporary case study**

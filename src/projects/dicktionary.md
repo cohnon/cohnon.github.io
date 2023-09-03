@@ -2,7 +2,7 @@
 name: Dicktionary
 desc: Kind of not learn new words.
 tools: [Javascript, WebSockets]
-live: https://gentle-caverns-62386.herokuapp.com/
+live: null
 source: https://github.com/CoherentNonsense/dicktionary
 order: 0
 ---

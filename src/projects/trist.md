@@ -2,7 +2,7 @@
 name: Trist
 desc: An anonymous social network.
 tools: [MERN Stack, WebSockets]
-live: https://tristchat.herokuapp.com/
+live: null
 source: https://github.com/coherentnonsense/trist
 order: 1
 ---
