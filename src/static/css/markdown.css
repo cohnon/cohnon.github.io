@@ -6,7 +6,7 @@ article h1 {
 article .date {
   margin-bottom: 1em;
   font-size: 18px;
-  color: #555;
+  color: var(--text2);
 }
 
 article .tag-list {
@@ -19,7 +19,7 @@ article .tag-list a {
 
 hr {
   border: none;
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid var(--border2);
   margin-bottom: 2em;
 }
 
@@ -30,7 +30,7 @@ article h3 {
 article h2 {
   margin: 2em 0 1em 0;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid var(--border2);
 }
 
 article p {
@@ -52,15 +52,12 @@ article img {
 }
 
 article table {
-  background-color: #000;
+  background-color: var(--border3);
   margin: 2em 0;
 }
 
-article thead {
-  color: #fff;
-}
-
 article th {
+  color: var(--background);
   padding: 5px 10px;
 }
 
@@ -70,7 +67,7 @@ article td {
 }
 
 article tbody {
-  background: #eee;
+  background: var(--background);
 }
 
 article blockquote {
