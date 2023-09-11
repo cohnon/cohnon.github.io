@@ -1,7 +1,7 @@
-function setTheme(lightmode) {
-  document.getElementById('theme-light').disabled = !lightmode;
-  document.getElementById('theme-dark').disabled = lightmode;
-  localStorage.setItem('theme-select', lightmode ? '1' : '0');
+function setTheme(darkmode) {
+  document.getElementById('theme-light').disabled = darkmode;
+  document.getElementById('theme-dark').disabled = !darkmode;
+  localStorage.setItem('theme-select', darkmode ? '0' : '1');
 }
 
 function toggleTheme() {
@@ -9,4 +9,4 @@ function toggleTheme() {
   setTheme(!isLight);
 }
 
-setTheme(localStorage.getItem('theme-select') == '1');
+setTheme(localStorage.getItem('theme-select') == '0');
