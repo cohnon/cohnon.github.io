@@ -12,8 +12,8 @@ about: Hello and welcome to my site :) I like to dump whatever I'm working on he
     <ul id="project-showcase">
       {%- for project in collections.projects | sortByOrder | head(1) -%}
       <a href="{{ project.url }}" class="project thumbnail" >
-        {%- if project.data.is_png -%}
-          <img src="/project_thumbnails/{{ project.fileSlug }}.png" alt="Thumbnail for {{ project.data.name }}" />
+        {%- if project.data.is_img -%}
+          <img src="/project_thumbnails/{{ project.fileSlug }}.webp" alt="Thumbnail for {{ project.data.name }}" />
         {%- else -%}
           <img src="/project_thumbnails/{{ project.fileSlug }}.gif" alt="Thumbnail for {{ project.data.name }}" />
         {%- endif -%}        <h2>{{ project.data.name }}</h2>

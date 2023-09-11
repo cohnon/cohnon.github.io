@@ -29,8 +29,8 @@ permalink: /projects/
       </div>
     </div>
     <a href="{{ project.url }}" class="thumbnail">
-      {%- if project.data.is_png -%}
-        <img src="/project_thumbnails/{{ project.fileSlug }}.png" alt="Thumbnail for {{ project.data.name }}" />
+      {%- if project.data.is_img -%}
+        <img src="/project_thumbnails/{{ project.fileSlug }}.webp" alt="Thumbnail for {{ project.data.name }}" />
       {%- else -%}
         <img src="/project_thumbnails/{{ project.fileSlug }}.gif" alt="Thumbnail for {{ project.data.name }}" />
       {%- endif -%}

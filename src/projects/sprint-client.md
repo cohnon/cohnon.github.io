@@ -5,5 +5,5 @@ tools: [Javascript]
 live: null
 source: https://github.com/coherentnonsense/sprint-client
 order: 3
-is_png: true
+is_img: true
 ---

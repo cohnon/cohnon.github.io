@@ -5,5 +5,5 @@ tools: [C]
 live: null
 source: https://github.com/coherentnonsense/sil-lang
 order: 100
-is_png: true
+is_img: true
 ---

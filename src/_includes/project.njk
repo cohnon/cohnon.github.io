@@ -3,8 +3,8 @@ layout: base
 ---
 <main id="project">
   <div id="banner-img">
-    {%- if is_png -%}
-      <img src="/project_thumbnails/{{ page.fileSlug }}.png">
+    {%- if is_img -%}
+      <img src="/project_thumbnails/{{ page.fileSlug }}.webp">
     {%- else -%}
       <img src="/project_thumbnails/{{ page.fileSlug }}.gif">
     {%- endif -%}
