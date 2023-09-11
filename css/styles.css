@@ -13,6 +13,7 @@
 
 body {
   background: var(--background);
+  transition: all 0.2s ease;
 }
 
 button {
@@ -84,6 +85,13 @@ header div {
   padding: 1em 0;
 }
 
+#theme {
+  width: 1.5em;
+  height: 1.5em;
+  margin-top: 0.2em;
+  fill: var(--text2);
+}
+
 .padded {
   margin-top: 2em;
 }
@@ -95,6 +103,7 @@ header a {
 #logo {
   font-size: 1.2em;
   line-height: 1em;
+  flex-grow: 1;
 }
 
 #logo p {
@@ -114,7 +123,7 @@ nav li {
   font-weight: bold;
   font-size: 0.9em;
   list-style: none;
-  margin-left: 1em;
+  margin-right: 1em;
   padding: 5px 0;
   position: relative;
   overflow: hidden;
@@ -605,6 +614,10 @@ form label div {
   }
   header nav li {
     margin: 0 1em;
+  }
+  #theme {
+    position: fixed;
+    right: 20px;
   }
   .project-preview {
     flex-direction: column-reverse;

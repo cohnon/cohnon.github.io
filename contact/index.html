@@ -5,7 +5,9 @@
     <title>Coherent Nonsense</title>
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/markdown.css" />
-    <link rel="stylesheet" href="/css/light.css" />
+    <link id="theme-light" rel="stylesheet" href="/css/light.css" />
+    <link id="theme-dark" disabled rel="stylesheet" href="/css/dark.css" />
+    <script src="/js/theme.js"></script>
 
     <link rel="stylesheet" href="/prism/default.css" />
   <body>
@@ -23,6 +25,11 @@
         <li class="active"><a href="/contact">Contact</a></li>
       </ul>
     </nav>
+    <a id="theme" onclick="toggleTheme()">
+      <svg id="glyphicons-halflings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+        <path id="contrast" d="M10,2a8,8,0,1,0,8,8A8.00917,8.00917,0,0,0,10,2Zm0,14A6,6,0,0,1,10,4Z"></path>
+      </svg>
+    </a>
   </div>
 </header>
     
@@ -44,7 +51,7 @@
     <p>
       Made with <a href="https://www.11ty.dev/">Eleventy</a>.
       Source code can be found on <a href="https://github.com/coherentnonsense/portfolio">Github</a>.</p>
-    <p>updated on Tue Sep 05 2023</p>
+    <p>updated on Mon Sep 11 2023</p>
   </div>
 </footer>
 
