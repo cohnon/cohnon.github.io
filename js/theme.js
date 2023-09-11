@@ -5,8 +5,8 @@ function setTheme(darkmode) {
 }
 
 function toggleTheme() {
-  const isLight = document.getElementById('theme-dark').disabled;
-  setTheme(!isLight);
+  const isDark = document.getElementById('theme-light').disabled;
+  setTheme(!isDark);
 }
 
 setTheme(localStorage.getItem('theme-select') == '0');
