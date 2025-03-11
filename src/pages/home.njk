@@ -11,6 +11,7 @@ permalink: /
         <div id="text" class="shadow">
             <a href="#">hello there</a>
             <img
+                class="pixelated"
                 src="home/intro.webp"
                 style="position:absolute;right:0; bottom:0">
         </div>
@@ -37,7 +38,7 @@ permalink: /
     </div>
     <div id="birb-banner"></div>
 
-    <h2>↴ what I'm working on</h2>
+    <h2>↴ <a href="/projects">what I'm working on</a></h2>
     <ul id="project-showcase">
         {% for project in collections.projects | sortByOrder %}
             {%- if project.data.order >= 100 -%}
@@ -46,9 +47,9 @@ permalink: /
         {% endfor %}
     </ul>
 
-    <h2>bits and bobs ↴</h2>
+    <h2><a href="/bits">bits and bobs</a> ↴</h2>
     <ul id="bits-and-bobs">
-        {% for bit in collections.bits | head(10) %}
+        {% for bit in collections.bits | head(10) | reverse %}
             <li>{{ bitPreview(bit) }}</li>
         {% endfor %}
     </ul>

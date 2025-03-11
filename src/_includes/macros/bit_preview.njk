@@ -1,10 +1,18 @@
 {% macro bitPreview(bit) %}
 
     <div class="bit">
-        {% if bit.data.type == "img" %}
+        {% if bit.data.type == "doodle" %}
+            <img
+                class="pixelated"
+                src="/bits/{{ bit.fileSlug }}.webp"
+                title="{{ bit.data.name }}"
+                alt="{{ bit.data.name }}"
+            >
+        {% elif bit.data.type == "photo" %}
             <img
                 src="/bits/{{ bit.fileSlug }}.webp"
-                alt="bit {{ project.fileSlug }}"
+                title="{{ bit.data.name }}"
+                alt="{{ bit.data.name }}"
             >
         {% endif %}
     </div>

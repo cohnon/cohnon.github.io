@@ -8,7 +8,7 @@ permalink: /bits/
     {% from 'macros/bit_preview.njk' import bitPreview %}
 
     <ul>
-        {% for bit in collections.bits %}
+        {% for bit in collections.bits | reverse %}
             <li>{{ bitPreview(bit) }}</li>
         {% endfor %}
     </ul>
