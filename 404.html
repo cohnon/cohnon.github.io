@@ -11,47 +11,45 @@
 
     <link rel="stylesheet" href="/prism/default.css" />
   <body>
-    <header id="header">
-  <div class="content">
-    <a id="logo" href="/">
-      <p>Coherent</p>
-      <p class="highlight">Nonsense</p>
-    </a>
+    <header class="content">
     <nav>
-      <ul>
-        <li class=""><a href="/">Home</a></li>
-        <li class=""><a href="/projects">Projects</a></li>
-        <li class=""><a href="/blog">Blog</a></li>
-        <li class=""><a href="/contact">Contact</a></li>
-      </ul>
+        <ul>
+            <li ><a href="/">cohnon.com</a></li>
+            <li ><a href="/projects">/projects</a></li>
+            <li ><a href="/blog">/blog</a></li>
+            <li ><a href="/bits">/bits</a></li>
+            <li ><a href="/me">/me</a></li>
+        </ul>
     </nav>
     <a id="theme" onclick="toggleTheme()">
-      <svg id="glyphicons-halflings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-        <path id="contrast" d="M10,2a8,8,0,1,0,8,8A8.00917,8.00917,0,0,0,10,2Zm0,14A6,6,0,0,1,10,4Z"></path>
-      </svg>
+        <svg>
+            <circle cx="14" cy="14" r="8"></circle>
+            <circle cx="14" cy="14" r="12">
+                <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 14 14" to="360 14 14" dur="8s" repeatCount="indefinite"></animateTransform>
+            </circle>
+	</svg>
     </a>
-  </div>
 </header>
+
     
-    <main class="content padded">
-  
+    
 <div>
   <h1>Uh Oh</h1>
 
   <p>That's an invalid link.</p>
 </div>
 
-</main>
 
     <footer>
   <div class="content">
     <p>
       Made with <a href="https://www.11ty.dev/">Eleventy</a>.
-      Source code can be found on <a href="https://github.com/coherentnonsense/portfolio">Github</a>.</p>
-    <p>updated on Mon Sep 11 2023</p>
+      Source code can be found on <a href="https://github.com/cohnon/portfolio">Github</a>.</p>
+    <p>updated on Tue Mar 11 2025</p>
   </div>
 </footer>
 
     <script src="/prism/prism.js"></script>
+    <script src="/js/marquee.js"></script>
   </body>
 </html>

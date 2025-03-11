@@ -1,113 +1,117 @@
 article h1 {
-  color: var(--green);
-  font-size: 2.2em;
+    color: var(--text1);
+    font-size: 1.2em;
 }
 
-article .date {
-  margin-bottom: 1em;
-  font-size: 18px;
-  color: var(--text2);
+article time {
+    font-size: 0.8em;
+    display: block;
 }
 
-article .tag-list {
-  margin-bottom: 1em;
-}
-
-article .tag-list a {
-  font-size: 0.9em;
-}
-
-hr {
-  border: none;
-  border-bottom: 1px solid var(--border2);
-  margin-bottom: 2em;
-}
-
-article h3 {
-  margin: 2em 0 1em 0;
+article .tags {
+    margin: 0 0 1em 0;
 }
 
 article h2 {
-  margin: 2em 0 1em 0;
-  padding-bottom: 0.5em;
-  border-bottom: 1px solid var(--border2);
+    font-size: 1.1em;
+    margin: 2em 0 0 0;
+}
+
+article h3 {
+    font-size: 1em;
+    margin: 2em 0 0 0;
 }
 
 article p {
-  line-height: 2em;
-  margin-bottom: 1em;
-  font-size: 18px;
+    font-family: Inter, Arial;
+    line-height: 1.5em;
+    margin-bottom: 0.7em;
 }
 
 article ul, article ol {
-  margin: 10px 0 20px 2em;
+    margin: 10px 0 20px 2em;
 }
 
 article li {
-  margin-bottom: 10px;;
+    margin-bottom: 10px;;
+}
+
+article ol > li {
+    list-style: number;
+}
+
+article ul > li {
+    list-style: disc;
 }
 
 article img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 article table {
-  background-color: var(--border3);
-  margin: 2em 0;
+    border: 1px solid var(--border);
+    border-collapse: collapse;
+    margin: 2em 0;
 }
 
 article th {
-  color: var(--background);
-  padding: 5px 10px;
+    padding: 0.5em 1em;
+}
+
+article tr {
+    padding: 0.5em 1em;
+    border-bottom: 1px solid var(--border);
 }
 
 article td {
-  padding: 5px 10px;
-  text-align: center;
+    padding: 1em;
+    text-align: center;
 }
 
 article tbody {
-  background: var(--background);
+    background: var(--background);
 }
 
 article blockquote {
-  border-left: 5px solid var(--green);
-  padding-left: 1em;
+    padding: 5px 10px 0 10px;
+    background: rgba(var(--shadow), 0.05);
+    border: 1px solid var(--border2);
+    border-left: 3px solid var(--border2);
+    border-radius: 2px;
 }
 
 article pre {
-  margin: 2em 0;
-}
-
-article code {
-  color: var(--green);
+    margin: 2em 0;
+    border: 1px dashed var(--border);
+    border-radius: 2px;
 }
 
 article code, article code span {
-  font-family: 'Consolas', monospace;
-  font-size: 16px;
+    font-family: 'Consolas', monospace;
+    font-size: 16px;
 }
 
 .header-anchor {
-  color: #333;
-  position: relative;
+    color: #333;
+    position: relative;
+    text-decoration: none;
 }
 
 .header-anchor:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .header-anchor::after {
-  content: '¶';
-  display: none;
-  color: var(--green);
-  margin-left: 10px;
+    content: '¶';
+    display: none;
+    color: var(--text2);
+    margin-left: 10px;
 }
 
 .header-anchor:hover::after {
-  display: inline;
+    display: inline;
 }
 
 article .bottom {
-  margin: 5em 0 2em 0;
+    margin: 5em 0 2em 0;
 }

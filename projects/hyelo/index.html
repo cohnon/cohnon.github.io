@@ -11,40 +11,40 @@
 
     <link rel="stylesheet" href="/prism/default.css" />
   <body>
-    <header id="header">
-  <div class="content">
-    <a id="logo" href="/">
-      <p>Coherent</p>
-      <p class="highlight">Nonsense</p>
-    </a>
+    <header class="content">
     <nav>
-      <ul>
-        <li class=""><a href="/">Home</a></li>
-        <li class="active"><a href="/projects">Projects</a></li>
-        <li class=""><a href="/blog">Blog</a></li>
-        <li class=""><a href="/contact">Contact</a></li>
-      </ul>
+        <ul>
+            <li ><a href="/">cohnon.com</a></li>
+            <li class=active><a href="/projects">/projects</a></li>
+            <li ><a href="/blog">/blog</a></li>
+            <li ><a href="/bits">/bits</a></li>
+            <li ><a href="/me">/me</a></li>
+        </ul>
     </nav>
     <a id="theme" onclick="toggleTheme()">
-      <svg id="glyphicons-halflings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-        <path id="contrast" d="M10,2a8,8,0,1,0,8,8A8.00917,8.00917,0,0,0,10,2Zm0,14A6,6,0,0,1,10,4Z"></path>
-      </svg>
+        <svg>
+            <circle cx="14" cy="14" r="8"></circle>
+            <circle cx="14" cy="14" r="12">
+                <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 14 14" to="360 14 14" dur="8s" repeatCount="indefinite"></animateTransform>
+            </circle>
+	</svg>
     </a>
-  </div>
 </header>
+
     
     <main id="project">
-  <div id="banner-img"><img src="/project_thumbnails/hyelo.gif"><h1>Hyelo</h1>
-  </div>
-  <div class="content">
-    <div class="action-button-list"><a href="https://github.com/coherentnonsense/hyelo" class="live"><div>Source</div></a>
+    <img src="/project_thumbnails/hyelo.gif">
+    <h1>Hyelo</h1>
+
+    <div class="content">
+        <div class="action-button-list"><a href="https://github.com/coherentnonsense/hyelo" class="live"><div>Source</div></a>
+        </div>
+        <br>
+        <div class="tag-list">
+            <p>Made with</p><a>javascript</a><a>node</a><a>websockets</a><a>social network</a></div>
     </div>
-    <br>
-    <div class="tag-list">
-      <p>Made with</p><a>Javascript</a><a>Node</a></div>
-  </div>
-  <article class="content">
-    <p><strong>temporary case study</strong></p>
+    <article class="content">
+        <p><strong>temporary case study</strong></p>
 <p>I had a weird obsession were I wanted to make an anonymous social media site with the likes of Omegle and Facebook (gross I know). I went through a lot of iterations trying to achieve this goal (My Github has so many dead privated repos), but I never really finished any. This was back when I wanted to do web development and so I used these social networks as a vessel to learn new technologies, and I'd honestly say I learned a ton from making them. Trist was my last project were I tried applying everything I knew. It used fancy React, used a NoSQL database, hosted images on a CDN, had a mailserver, and ran cron jobs. This was all tied together with Domain Driven Design (DDD). The most over engineered architecture I could have chosen. This made it a pain to add new features, as every tiny thing required me to add 4 new files, each with it's own boilerplate. It was fun while it lasted, but I killed all joy for web dev with that project.</p>
 <p>Hyelo was a turning point in how I approached code. I was inspired after discovering a tiny chatting platform called hack.chat. It was simple and elegant to use. There were no friend requests, email signups, or accounts. It was the complete antithesis to what I had become, but there was something about it that I wanted. So I set out to make something similar. Using pure HTML, CSS, and JavaScript for a client and a simple Websocket server, I made Hyelo in a few days. It was a fun project, but I had to get back to work on the dreaded Trist. It was only after, that I realised I enjoyed using Hyelo more than Trist. Trist felt clunky with all it's SPA bloat, while Hyelo just worked. But more importantly, I love the simplicity of its code.</p>
 <h2 id="features" tabindex="-1"><a class="header-anchor" href="#features"><span>Features</span></a></h2>
@@ -55,18 +55,20 @@
 <li>A minimal UI with multiple colour palletes.</li>
 </ul>
 
-  </article>
+    </article>
 </main>
+
 
     <footer>
   <div class="content">
     <p>
       Made with <a href="https://www.11ty.dev/">Eleventy</a>.
-      Source code can be found on <a href="https://github.com/coherentnonsense/portfolio">Github</a>.</p>
-    <p>updated on Mon Sep 11 2023</p>
+      Source code can be found on <a href="https://github.com/cohnon/portfolio">Github</a>.</p>
+    <p>updated on Tue Mar 11 2025</p>
   </div>
 </footer>
 
     <script src="/prism/prism.js"></script>
+    <script src="/js/marquee.js"></script>
   </body>
 </html>

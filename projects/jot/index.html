@@ -11,40 +11,40 @@
 
     <link rel="stylesheet" href="/prism/default.css" />
   <body>
-    <header id="header">
-  <div class="content">
-    <a id="logo" href="/">
-      <p>Coherent</p>
-      <p class="highlight">Nonsense</p>
-    </a>
+    <header class="content">
     <nav>
-      <ul>
-        <li class=""><a href="/">Home</a></li>
-        <li class="active"><a href="/projects">Projects</a></li>
-        <li class=""><a href="/blog">Blog</a></li>
-        <li class=""><a href="/contact">Contact</a></li>
-      </ul>
+        <ul>
+            <li ><a href="/">cohnon.com</a></li>
+            <li class=active><a href="/projects">/projects</a></li>
+            <li ><a href="/blog">/blog</a></li>
+            <li ><a href="/bits">/bits</a></li>
+            <li ><a href="/me">/me</a></li>
+        </ul>
     </nav>
     <a id="theme" onclick="toggleTheme()">
-      <svg id="glyphicons-halflings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-        <path id="contrast" d="M10,2a8,8,0,1,0,8,8A8.00917,8.00917,0,0,0,10,2Zm0,14A6,6,0,0,1,10,4Z"></path>
-      </svg>
+        <svg>
+            <circle cx="14" cy="14" r="8"></circle>
+            <circle cx="14" cy="14" r="12">
+                <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 14 14" to="360 14 14" dur="8s" repeatCount="indefinite"></animateTransform>
+            </circle>
+	</svg>
     </a>
-  </div>
 </header>
+
     
     <main id="project">
-  <div id="banner-img"><img src="/project_thumbnails/jot.gif"><h1>Jot</h1>
-  </div>
-  <div class="content">
-    <div class="action-button-list"><a href="https://github.com/coherentnonsense/jot" class="live"><div>Source</div></a>
+    <img src="/project_thumbnails/jot.gif">
+    <h1>Jot</h1>
+
+    <div class="content">
+        <div class="action-button-list"><a href="https://github.com/coherentnonsense/jot" class="live"><div>Source</div></a>
+        </div>
+        <br>
+        <div class="tag-list">
+            <p>Made with</p><a>c</a><a>openGL</a><a>batch renderer</a><a>gamedev</a><a>library</a></div>
     </div>
-    <br>
-    <div class="tag-list">
-      <p>Made with</p><a>C</a><a>OpenGL</a></div>
-  </div>
-  <article class="content">
-    <p><strong>temporary case study</strong></p>
+    <article class="content">
+        <p><strong>temporary case study</strong></p>
 <p>When learning a language, we need some form of visual feedback to know that we're actually accomplishing something. Usually, that feedback is in the form of a print statement. This can get us pretty far into learning the concepts of a language. With a simple print statement, you can make a number guesser, hangman, or a multitude of other text-based games. These are fun to make, but there are limitations. What if you want to create a physics system? or a graphical game? Sooner or later, you will want to &quot;upgrade&quot; your basic text output with something more powerful. There are a lot of great options out there, but any library will have some documentation you will have to learn.</p>
 <p>I want Jot to be an upgrade that has as few required function calls possible. It keeps the simplicity of a basic &quot;printf&quot; but gives developers the tools to create much more visual program.</p>
 <h4 id="example.c" tabindex="-1"><a class="header-anchor" href="#example.c"><span>example.c</span></a></h4>
@@ -70,18 +70,20 @@ int main() {
 }
 </code></pre>
 
-  </article>
+    </article>
 </main>
+
 
     <footer>
   <div class="content">
     <p>
       Made with <a href="https://www.11ty.dev/">Eleventy</a>.
-      Source code can be found on <a href="https://github.com/coherentnonsense/portfolio">Github</a>.</p>
-    <p>updated on Mon Sep 11 2023</p>
+      Source code can be found on <a href="https://github.com/cohnon/portfolio">Github</a>.</p>
+    <p>updated on Tue Mar 11 2025</p>
   </div>
 </footer>
 
     <script src="/prism/prism.js"></script>
+    <script src="/js/marquee.js"></script>
   </body>
 </html>
