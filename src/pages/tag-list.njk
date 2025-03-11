@@ -1,5 +1,5 @@
 ---
-layout: padded
+layout: base
 pagination:
   data: collections
   size: 1
@@ -10,19 +10,14 @@ pagination:
     - blog
 permalink: /blog/tags/{{ tag | slugify }}/
 ---
-<h1 id="tag-search">Tagged <p>{{ tag }}</p></h1>
-<p>See <a href="/blog/">all tags</a></p>
-<ul>
-  {%- for post in collections[tag] -%}
-    <li class="blog-item">
-      <a href="{{ post.url }}" class="title">{{ post.data.title }}</a>
-      <p class="date">{{ post.date | formatDate }}</p>
-      <div class="tag-list">
-        {%- for tagItem in post.data.tags | filterTagList -%}
-          <a href="/blog/tags/{{ tagItem | slugify }}/" class="tag-item">{{ tagItem }}</a>
-        {%- endfor -%}
-      </div>
-      <p class="desc">{{ post.templateContent | striptags(true) | truncate(150) }}</p>
-    </li>
-  {%- endfor -%}
-</ul>
+{% from 'macros/post_preview.njk' import postPreview %}
+
+<main>
+    <h1 id="tag-search">Tagged <p>{{ tag }}</p></h1>
+    <p>See <a href="/blog/">all tags</a></p>
+    <ul>
+      {%- for post in collections[tag] -%}
+        <li>{{ postPreview(post) }}</li>
+      {%- endfor -%}
+    </ul>
+</main>

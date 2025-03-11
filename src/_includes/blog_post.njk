@@ -1,77 +1,21 @@
 ---
-layout: padded
+layout: base
 ---
-<article>
-  <h1>{{ title }}</h1>
-  <p class="date">{{ date | formatDate }}</p>
-  <div class="tag-list">
-    {%- for tagItem in tags | filterTagList -%}
-      <a href="/blog/tags/{{ tagItem | slugify }}/" class="tag-item">{{ tagItem }}</a>
-    {%- endfor -%}
-  </div>
-  <hr>
-  {{ content | safe }}
-  <div class="bottom">
-    <a href="/blog/">← Back to all posts</a>
-  </div>
-  <hr>
-</article>
-<section id="comments">
-  <div id="modal">
-    <h1 id="modal-h"></h1>
-    <p id="modal-p"></p>
-    <button id="modal-close" class="button">Close</button>
-  </div>
-  <div style="color:red">Comments are currently disabled</div>
-  <br>
-  <div class="header">
-    <h2>Comments</h2>
-    <button id="add-comment" class="button">Add Comment</button>
-  </div>
-  <div id="root-form">
-    <form id="comment-form" method="POST" action="https://cohnon-staticman.herokuapp.com/v2/entry/coherentnonsense/coherentnonsense.github.io/main/comments">
-      <div class="header">
-        <h3>Add Comment</h3>
-        <button type="button" id="cancel-comment" class="link">cancel</button>
+<main id="blog-post">
+    <article>
+      <time>{{ date | formatDate }}</time>
+      <h1>{{ title }}</h1>
+      <div class="tags">
+        {%- for tagItem in tags | filterTagList -%}
+          <a href="/blog/tags/{{ tagItem | slugify }}/" class="tag-item">{{ tagItem }}</a>
+        {%- endfor -%}
       </div>
-      <input name="slug" type="hidden" value="{{ page.fileSlug }}">
-      <label><div>Message</div><textarea name="message" id="form-message"></textarea></label>
-      <label><div>Name (optional)</div><input name="name" type="text"></label>
-      
-      <button type="submit" id="submit-comment" class="button">Submit</button>
-    </form>
-  </div>
-  {% if comments[page.fileSlug] %}
-  <ul id="comment-list">
-    {% for comment in comments[page.fileSlug] | objToArray | parent("") | reverse %}
-      <li id="{{ comment._id }}" class="root comment">
-        <div>
-          {% if comment.name == 'CoherentNonsense' %}
-            <span class="a">Author</span>
-          {% endif %}
-          <span class="n">{{ comment.name | default("Anonymous") }}</span> <span class="d">{{ comment.date | formatDate }}</span>
-        </div>
-        <p class="m">{{ comment.message }}</p>
-        <button class="r reply-comment">↪︎ Reply to {{ comment.name }}</button>
-        <div class="reply-list">
-          <ul>
-            {% for reply in comments[page.fileSlug] | objToArray | parent(comment._id) %}
-            <li id="{{ reply._id }}" class="comment">
-              <div>
-                <span class="n">{{ reply.name | default("Anonymous") }}</span> <span class="d">{{ reply.date | formatDate }}</span>
-              </div>
-              <p class="m">{{ reply.message }}</p>
-              <!-- <button class="r reply-comment">↪︎ Reply to {{ comment.name }}</button> -->
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-    <p style="margin-top: 1em;">No Comments</p>
-  {% endif %}
-</section>
 
-<script src="/js/comments.js"></script>
+      {{ content | safe }}
+
+      <div class="bottom">
+        <a href="/blog/">↵ Back to all posts</a>
+      </div>
+      <hr>
+    </article>
+</main>

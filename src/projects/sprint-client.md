@@ -1,9 +1,10 @@
 ---
 name: Sprint Client
-desc: A client for the online game thetravelers.online.
-tools: [Javascript]
+desc: The modded client for thetravelers.online
+tools: [thetravelers, javascript, gamedev, modding]
 live: null
 source: https://github.com/coherentnonsense/sprint-client
+thumb: sprint-client.webp
+
 order: 3
-is_img: true
 ---

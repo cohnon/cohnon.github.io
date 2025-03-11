@@ -1,0 +1,12 @@
+{% macro bitPreview(bit) %}
+
+    <div class="bit">
+        {% if bit.data.type == "img" %}
+            <img
+                src="/bits/{{ bit.fileSlug }}.webp"
+                alt="bit {{ project.fileSlug }}"
+            >
+        {% endif %}
+    </div>
+
+{% endmacro %}

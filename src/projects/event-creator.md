@@ -1,8 +1,10 @@
 ---
 name: Travelers Event Creator
-desc: Generate game data for the online game thetravelers.online
-tools: [Javascript]
+desc: The event creator tool for thetravelers.online
+tools: [thetravelers, javascript, json, tool]
 live: https://www.coherentnonsense.com/event-creator/
 source: https://github.com/coherentnonsense/event-creator
-order: 2.5
+thumb: event-creator.gif
+
+order: 3
 ---

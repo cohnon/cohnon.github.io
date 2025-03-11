@@ -1,39 +1,14 @@
 ---
-layout: padded
+layout: base
 permalink: /projects/
 ---
-{%- for project in collections.projects | sortByOrder -%}
-  <div id="{{ project.data.name | slugify }}" class="project-preview" >
-    <div class="details">
-      <h3>
-        <a href="{{ project.url }}">
-          {{ project.data.name }}
-        </a>
-      </h3>
-      <div class="tag-list">
-        <p>Made with</p>
-        {%- for tool in project.data.tools -%}
-          <a>{{ tool }}</a>
-        {%- endfor -%}
-      </div>
-      <p class="desc">{{ project.data.desc }}</p>
-      <div class="action-button-list">
-        {%- if project.data.live -%}
-          <a href="{{ project.data.live }}" target="_blank" class="live">
-            <div>Site</div>
-          </a>
-        {%- endif -%}
-        <a href="{{ project.data.source }}" target="_blank" class="live">
-          <div>Source</div>
-        </a>
-      </div>
-    </div>
-    <a href="{{ project.url }}" class="thumbnail">
-      {%- if project.data.is_img -%}
-        <img src="/project_thumbnails/{{ project.fileSlug }}.webp" alt="Thumbnail for {{ project.data.name }}" />
-      {%- else -%}
-        <img src="/project_thumbnails/{{ project.fileSlug }}.gif" alt="Thumbnail for {{ project.data.name }}" />
-      {%- endif -%}
-    </a>
-  </div>
-{%- endfor -%}
+
+<main>
+    {% from 'macros/project_preview.njk' import projectPreview %}
+
+    <ul>
+        {% for project in collections.projects | sortByOrder %}
+            <li>{{ projectPreview(project) }}</li>
+        {% endfor %}
+    </ul>
+</main>

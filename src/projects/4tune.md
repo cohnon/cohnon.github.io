@@ -1,8 +1,9 @@
 ---
-name: 4Tune
-desc: A rhythm game for the Playdate Console
-tools: [C, Playdate]
-live: null
-source: https://github.com/coherentnonsense/4tune
+name: Crank Rhythm
+desc: The rhythm game for the Playdate
+tools: [c, playdate, javascript, gamedev, music, embedded]
+source: https://github.com/cohnon/crank-rhythm
+thumb: 4tune.gif
+
 order: 5
 ---

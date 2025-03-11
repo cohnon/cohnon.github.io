@@ -1,9 +1,9 @@
 :root {
-  --background: rgb(19, 19, 22);
+  --background: rgb(10, 10, 10);
   --text1: rgb(206, 206, 206);
   --text2: rgb(180, 180, 180);
   --border: rgb(168, 168, 168);
   --border2: rgb(112, 118, 131);
-  --border3: rgb(197, 197, 197);
   --green: #30df56;
+  --shadow: 50, 50, 50;
 }

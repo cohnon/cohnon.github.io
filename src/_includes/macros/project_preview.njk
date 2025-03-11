@@ -1,0 +1,23 @@
+{% from 'macros/marquee.njk' import marquee %}
+
+{% macro projectPreview(project, type = "") %}
+
+    <div class="project-preview">
+        <img
+            class="shadow"
+            src="/projects/{{ project.data.thumb }}"
+            alt="Thumbnail for {{ project.data.name }}"
+        />
+
+        <div class="details">
+            {% if type %}
+                <p class="type">{{ type }}</p>
+            {% endif %}
+            <h3><a href="{{ project.data.src }}">{{ project.data.name }}</a></h3>
+            {{ marquee(project.data.tools) }}
+            <p class="desc">{{ project.data.desc }}</p>
+
+        </div>
+    </div>
+
+{% endmacro %}

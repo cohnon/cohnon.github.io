@@ -1,0 +1,15 @@
+---
+layout: base
+permalink: /bits/
+---
+<main id="bits">
+    <p>A place for all the small things.</p>
+
+    {% from 'macros/bit_preview.njk' import bitPreview %}
+
+    <ul>
+        {% for bit in collections.bits %}
+            <li>{{ bitPreview(bit) }}</li>
+        {% endfor %}
+    </ul>
+</main>

@@ -2,31 +2,25 @@
 layout: base
 ---
 <main id="project">
-  <div id="banner-img">
-    {%- if is_img -%}
-      <img src="/project_thumbnails/{{ page.fileSlug }}.webp">
-    {%- else -%}
-      <img src="/project_thumbnails/{{ page.fileSlug }}.gif">
-    {%- endif -%}
-
+    <img src="/project_thumbnails/{{ thumb }}">
     <h1>{{ name }}</h1>
-  </div>
-  <div class="content">
-    <div class="action-button-list">
-      {%- if live -%}
-        <a href="{{ live }}" class="live"><div>Site</div></a>
-      {%- endif -%}
-      <a href="{{ source }}" class="live"><div>Source</div></a>
+
+    <div class="content">
+        <div class="action-button-list">
+            {%- if live -%}
+                <a href="{{ live }}" class="live"><div>Site</div></a>
+            {%- endif -%}
+            <a href="{{ source }}" class="live"><div>Source</div></a>
+        </div>
+        <br>
+        <div class="tag-list">
+            <p>Made with</p>
+            {%- for tool in tools -%}
+                <a>{{ tool }}</a>
+            {%- endfor -%}
+        </div>
     </div>
-    <br>
-    <div class="tag-list">
-      <p>Made with</p>
-      {%- for tool in tools -%}
-        <a>{{ tool }}</a>
-      {%- endfor -%}
-    </div>
-  </div>
-  <article class="content">
-    {{ content | safe }}
-  </article>
+    <article class="content">
+        {{ content | safe }}
+    </article>
 </main>

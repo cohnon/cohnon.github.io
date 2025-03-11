@@ -1,6 +1,7 @@
 ---
 title: Hello World
 date: 2022-03-06
+desc: Test for the markdown renderer
 tags:
   - meta
   - personal
@@ -61,7 +62,7 @@ Wow this is a whole new area
 
 Here's a kitten
 
-![Picture of a kitten](/img/hello-world/kitten.png)
+![Picture of a kitten](/blog/hello-world/kitten.png)
 
 and now for the next chapter...
 

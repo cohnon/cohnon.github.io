@@ -1,9 +1,11 @@
 ---
 name: Jot
-desc: A dead simple 2D renderer
-tools: [C, OpenGL]
+desc: The C 2D graphics library
+tools: [c, openGL, batch renderer, gamedev, library]
 live: null
 source: https://github.com/coherentnonsense/jot
+thumb: jot.gif
+
 order: 4
 ---
 
