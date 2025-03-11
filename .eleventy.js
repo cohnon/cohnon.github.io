@@ -1,5 +1,5 @@
-const markdownIt = require('markdown-it');
-const markdownItAnchor = require('markdown-it-anchor');
+import markdownIt from 'markdown-it';
+import markdownItAnchor from 'markdown-it-anchor';
 
 function sortByOrder(values) {
   let vals = [...values];     // this *seems* to prevent collection mutation...
@@ -34,7 +34,7 @@ function filterTagList(tags) {
   return (tags || []).filter(tag => ["all", "blog", "projects"].indexOf(tag) === -1);
 }
 
-module.exports = function(config) {
+export default function(config) {
   const markdownLib = markdownIt({ html: true })
   .use(markdownItAnchor, {
     level: 2,
