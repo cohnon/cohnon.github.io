@@ -313,6 +313,8 @@ footer::before {
 
 #bits-and-bobs .bit {
     margin-right: 10px;
+    width: 200px;
+    height: 200px;
 }
 
 @keyframes birb-banner {
