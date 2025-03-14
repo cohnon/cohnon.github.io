@@ -3,13 +3,25 @@ layout: base
 permalink: /bits/
 ---
 <main id="bits">
-    <p>A place for all the small things.</p>
+    <p id="msg" align="center">A place for all the small things.</p>
 
     {% from 'macros/bit_preview.njk' import bitPreview %}
 
     <ul>
-        {% for bit in collections.bits | reverse %}
-            <li>{{ bitPreview(bit) }}</li>
-        {% endfor %}
+        <div class="col">
+            {% for bit in collections.bits | reverse | iter_n(3) %}
+                <li>{{ bitPreview(bit) }}</li>
+            {% endfor %}
+        </div>
+        <div class="col">
+            {% for bit in collections.bits | reverse | iter_n(3, 1) %}
+                <li>{{ bitPreview(bit) }}</li>
+            {% endfor %}
+        </div>
+        <div class="col">
+            {% for bit in collections.bits | reverse | iter_n(3, 2) %}
+                <li>{{ bitPreview(bit) }}</li>
+            {% endfor %}
+        </div>
     </ul>
 </main>

@@ -22,8 +22,13 @@ permalink: /
 
             <label id="recent-posts">recent posts</label>
             <ul>
-                {%- for post in collections.blog | reverse | head(5) -%}
-                    <li class="ellipsis"><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+                {%- for post in collections.blog | head(-5) -%}
+                    <li class="ellipsis">
+                        {% if post.data.draft == true %}
+                            [draft]
+                        {% endif %}
+                        <a href="{{ post.url }}">{{ post.data.title }}</a>
+                    </li>
                 {%- endfor -%}
             </ul>
 
@@ -49,7 +54,7 @@ permalink: /
 
     <h2><a href="/bits">bits and bobs</a> ↴</h2>
     <ul id="bits-and-bobs">
-        {% for bit in collections.bits | head(10) | reverse %}
+        {% for bit in collections.bits | head(-10) %}
             <li>{{ bitPreview(bit) }}</li>
         {% endfor %}
     </ul>

@@ -213,6 +213,7 @@ footer {
     border-top: 1px solid var(--border);
     padding: 2em 0;
     position: relative;
+    text-align: center;
 }
 
 footer p:nth-child(2) {
@@ -230,6 +231,10 @@ footer::before {
     top: -7px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+#not-found {
+    text-align: center;
 }
 
 
@@ -339,32 +344,25 @@ footer::before {
 /********/
 /* bits */
 /********/
-#bits p {
-    margin-bottom: 10px;
+#bits #msg {
+    margin-bottom: 15px;
 }
 
-#bits ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#bits .bit {
-    margin: 5px;
+#bits .col {
+    width: 32%;
+    float: left;
+    margin-right: 1%;
 }
 
 .bit {
-    border: 1px dashed var(--border2);
-    width: 200px;
-    height: 200px;
+    line-height: 0;
     padding: 2px;
-    background: #fff;
+    margin-bottom: 10px;
+    border: 1px dashed var(--border2);
 }
 
 .bit img {
     width: 100%;
-    height: 100%;
 }
 
 /*******************/
@@ -376,6 +374,7 @@ footer::before {
 }
 
 .project-preview img {
+    max-height: 400px;
     width: 60%;
     display: block;
     border: 1px solid var(--border);
@@ -414,43 +413,17 @@ li:nth-child(even) .project-preview .details {
 }
 
 .action-button-list {
-    margin-top: auto;
+    margin-bottom: 20px;
 }
 
-.action-button-list .live {
-    border: 1px solid var(--border);
-    padding: 3px 35px;
-    display: inline-block;
-    overflow: hidden;
+.action-button-list a {
     margin-right: 5px;
-    transition: background-color 100ms ease;
 }
 
-.action-button-list .live div {
-    color: var(--text1);
-    position: relative;
-    transition: all 150ms ease;
-}
-
-.action-button-list .live div::after {
-    content: "»";
-    font-size: 1em;
-    font-weight: bold;
-    position: absolute;
-    text-align: center;
-    z-index: -1;
-    width: 100%;
-    top: -55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.action-button-list .live:hover div {
-    transform: translate(0, 105%);
-}
-
-.action-button-list .live:hover {
-    background-color: var(--text1);
+#header-img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 30px auto;
 }
 
 /* BLOG */
@@ -580,14 +553,14 @@ li:nth-child(even) .project-preview .details {
         flex-grow: 1;
     }
 
-    #bits li {
-        width: 100%;
+    #bits .col {
+        width: 33.33%;
+        margin: 0;
     }
 
     #bits .bit {
-        width: 100%;
-        height: auto;
-        margin: 0;
         padding: 0;
+        margin: 0;
+        border: none;
     }
 }

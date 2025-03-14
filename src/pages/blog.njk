@@ -6,8 +6,10 @@ permalink: /blog/
 
 <main>
     <ul>
-      {%- for post in collections.blog | reverse -%}
-        <li>{{ postPreview(post) }}</li>
-      {%- endfor -%}
+      {% for post in collections.blog | reverse %}
+        {% if post.data.draft != true %}
+            <li>{{ postPreview(post) }}</li>
+        {% endif %}
+      {% endfor %}
     </ul>
 </main>

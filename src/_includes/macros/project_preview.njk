@@ -13,7 +13,7 @@
             {% if type %}
                 <p class="type">{{ type }}</p>
             {% endif %}
-            <h3><a href="{{ project.data.src }}">{{ project.data.name }}</a></h3>
+            <h3><a href="{{ project.url }}">{{ project.data.name }}</a></h3>
             {{ marquee(project.data.tools) }}
             <p class="desc">{{ project.data.desc }}</p>
 

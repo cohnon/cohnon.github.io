@@ -3,7 +3,7 @@ name: Jot
 desc: The C 2D graphics library
 tools: [c, openGL, batch renderer, gamedev, library]
 live: null
-source: https://github.com/coherentnonsense/jot
+source: https://github.com/cohnon/jot
 thumb: jot.gif
 
 order: 4

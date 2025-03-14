@@ -24,7 +24,7 @@ function head(array, n) {
     return [];
   }
   if( n < 0 ) {
-    return array.slice(n);
+    return array.slice(n).reverse();
   }
 
   return array.slice(0, n);
@@ -32,6 +32,16 @@ function head(array, n) {
 
 function filterTagList(tags) {
   return (tags || []).filter(tag => ["all", "blog", "projects"].indexOf(tag) === -1);
+}
+
+function iter_n(array, n, start) {
+    if (!Array.isArray(array) || array.length === 0) {
+        return [];
+    }
+
+    if (start == undefined) { start = 0; }
+
+    return array.filter((_, i) => (i+start) % n == 0);
 }
 
 export default function(config) {
@@ -48,6 +58,7 @@ export default function(config) {
   config.addFilter("sortByOrder", sortByOrder);
   config.addFilter("formatDate", formatDate);
   config.addFilter("head", head);
+  config.addFilter("iter_n", iter_n);
   config.addFilter("filterTagList", filterTagList)
 
   config.addFilter('objToArray', function(obj) {
