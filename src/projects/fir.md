@@ -8,3 +8,13 @@ draft: true
 
 order: 100
 ---
+
+The fire intermediate langauge (FIR) is an IR designed to generate a program
+as quickly as possible in order to bootstrap your language.
+
+##### *fir-chan*
+![fir-chan](/projects/firchan.webp)
+
+## Language Development Woes
+
+:'(
