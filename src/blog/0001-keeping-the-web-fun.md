@@ -29,18 +29,3 @@ ago when this change happened, and it makes me sad that entire generations are
 going to miss that freedom. Entire generations thinking what we have now
 suffices.
 
-Have you seen the content people (and especially kids) are watching nowadays?
-An endless conveyor of TTS misinformational slop being pushed onto our screens
-almost as fast as it leaves our brains.
-
-There's this thing called the **dead internet theory** which honestly isn't much
-of a theory anymore. It's the idea that AI-generated content has surpassed our own
-human made internet [1]. That most of what you see online was not made by
-another person, but by 1's and 0's on a machine. Despite the massive growth of the
-internet in this new digital age, it's never felt so empty.
-
-But out on the margins of this desolate series of tubes we call the internet,
-people have been building things for fun again. Not for clicks. Nor monetary
-insentive. But for themselves.
-
-This is the indie web.
