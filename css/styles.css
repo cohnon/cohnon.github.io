@@ -15,16 +15,40 @@ body {
     box-sizing: border-box;
 }
 
+.sm {
+    font-size: 0.8em;
+}
+
+.smbol {
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.vmarg {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.brdr {
+    border: 1px solid var(--border);
+    padding: 2px;
+}
+
+hr {
+    margin: 5px 0;
+}
+
 /***********/
 /* buttons */
 /***********/
-a {
-    font-style: italic;
-}
-
 a:hover, button:hover {
     cursor: pointer;
     color: var(--green);
+}
+
+textarea {
+    color: black;
+    width: 100%;
 }
 
 /*********/
@@ -88,8 +112,7 @@ li {
         #999 45%, #999 50%
     );
     margin: 5px 0 1em 0;
-    border-radius: 3px;
-    animation: stripes-bobbing 2s infinite alternate linear;
+    animation: stripes-bobbing 3s infinite alternate linear;
 }
 
 @keyframes stripes-bobbing {
@@ -170,6 +193,8 @@ nav a:hover, nav li.active a {
 }
 
 #theme {
+    background: none;
+    border: none;
     width: 30px;
     height: 30px;
     margin-left: 1em;
@@ -208,29 +233,13 @@ main {
 /* footer */
 /**********/
 footer {
-    color: rgb(56, 56, 56);
-    margin-top: 2em;
-    border-top: 1px solid var(--border);
-    padding: 2em 0;
+    margin: 2em 0;
     position: relative;
     text-align: center;
 }
 
 footer p:nth-child(2) {
     margin-top: 2em;
-}
-
-footer::before {
-    content: "";
-    width: 13px;
-    height: 13px;
-    border: 1px solid var(--green);
-    background-color: var(--background);
-    border-radius: 50%;
-    position: absolute;
-    top: -7px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 #not-found {
@@ -241,52 +250,50 @@ footer::before {
 /********/
 /* home */
 /********/
-#home h2 {
-    font-size: 1em;
-    margin: 1em 0 5px 0;
+
+#warning {
+    display: none;
 }
 
 #home #intro {
     display: flex;
-    margin-bottom: 30px;
 }
 
 #home #text {
     flex-grow: 1;
-    position: relative;
-    min-height: 300px;
-    border: 1px solid var(--border);
-    padding: 10px;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
-#home #text a:hover {
+#home #box {
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid var(--border);
+    min-height: 300px;
+}
+
+#home #box a:hover {
+    flex-grow: 1;
     color: var(--green);
 }
 
 #home aside {
-    flex-grow: 1;
-    width: 0;
+    width: 180px;
     display: flex;
     flex-direction: column;
     margin-left: 1em;
 }
 
-#home #recent-posts + ul {
-    margin-bottom: 10px;
-}
-
-#home time {
+#home #loc {
     border: 1px dashed var(--border);
     padding: 1.2em 0 0.5em 0;
-    font-family: monospace;
-    font-weight: bold;
     text-align: center;
     position: relative;
 }
 
-#home time::after {
-    content: "my time";
+#home #loc::after {
+    content: "info";
     position: absolute;
     left: 50%;
     top: 0;
@@ -296,12 +303,25 @@ footer::before {
 }
 
 #birb-banner {
+    margin-top: auto;
     width: 100%;
     height: 32px;
     background-image: url('/home/dancing_birbs.webp');
-    background-repeat: repeat;
+    background-size: contain;
     animation: birb-banner 800ms linear infinite;
     image-rendering: pixelated;
+}
+
+#construction {
+    padding: 5px 0;
+    background: #fff08d;
+    border: 3px dashed black;
+    font-weight: bold;
+    text-align: center;
+}
+
+#construction p {
+    color: black;
 }
 
 #bits-and-bobs {
@@ -333,14 +353,7 @@ footer::before {
 
 #latest-activity + ul li {
     margin: 3px 0;
-}
-
-#listening-to {
-    margin-top: auto;
-}
-
-#home h2 {
-    margin-top: 50px;
+    margin-bottom: auto;
 }
 
 /********/
@@ -365,6 +378,10 @@ footer::before {
 
 .bit img {
     width: 100%;
+}
+
+#btns img {
+    margin-bottom: 5px;
 }
 
 /*******************/
@@ -430,31 +447,12 @@ li:nth-child(even) .project-preview .details {
 
 /* BLOG */
 .post-preview {
-    display: block;
-    padding: 10px;
-    position: relative;
-}
-
-.post-preview .title {
-    font-size: 1.2em;
+    padding: 10px 0;
 }
 
 .post-preview .desc {
     color: var(--text2);
-    margin: 5px 5px 5px 0;
-}
-
-.post-preview time {
-    display: block;
-    color: var(--text1);
     font-size: 0.8em;
-}
-
-.post-preview hr {
-    margin-top: 10px;
-    background: var(--border2);
-    border: none;
-    height: 1px;
 }
 
 .tags a {
@@ -501,6 +499,13 @@ li:nth-child(even) .project-preview .details {
         padding: 10px;
     }
 
+    #warning {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
     #home #intro {
         flex-direction: column;
         height: fit-content;
@@ -509,6 +514,14 @@ li:nth-child(even) .project-preview .details {
     #home #intro aside {
         margin: 2em 0;
         width: 100%;
+    }
+
+    #navlink {
+        display: none;
+    }
+
+    #birb-banner {
+        display: none;
     }
 
     header {

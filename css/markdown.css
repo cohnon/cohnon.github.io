@@ -23,7 +23,6 @@ article h3 {
 }
 
 article p {
-    font-family: Inter, Arial;
     line-height: 1.5em;
     margin-bottom: 0.7em;
 }
@@ -44,8 +43,13 @@ article ul > li {
     list-style: disc;
 }
 
+article ::marker {
+    color: var(--text2);
+}
+
 article img {
     max-width: 100%;
+    image-rendering: pixelated;
 }
 
 article table {
@@ -73,11 +77,9 @@ article tbody {
 }
 
 article blockquote {
-    padding: 5px 10px 0 10px;
-    background: rgba(var(--shadow), 0.05);
-    border: 1px solid var(--border2);
     border-left: 3px solid var(--border2);
-    border-radius: 2px;
+    padding-left: 1em;
+    font-weight: bold;
 }
 
 article pre {
@@ -97,19 +99,10 @@ article code, article code span {
     text-decoration: none;
 }
 
-.header-anchor:hover {
-    text-decoration: none;
-}
-
-.header-anchor::after {
-    content: '¶';
-    display: none;
-    color: var(--text2);
-    margin-left: 10px;
-}
-
-.header-anchor:hover::after {
-    display: inline;
+h2::before {
+    content: '#';
+    color: var(--green);
+    margin-right: 10px;
 }
 
 article .bottom {

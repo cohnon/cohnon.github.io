@@ -21,14 +21,14 @@
             <li class=active><a href="/me">/me</a></li>
         </ul>
     </nav>
-    <a id="theme" onclick="toggleTheme()">
+    <button id="theme" onclick="toggleTheme()">
         <svg>
             <circle cx="14" cy="14" r="8"></circle>
             <circle cx="14" cy="14" r="12">
                 <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 14 14" to="360 14 14" dur="8s" repeatCount="indefinite"></animateTransform>
             </circle>
 	</svg>
-    </a>
+    </button>
 </header>
 
     
@@ -40,11 +40,19 @@
     <ul><li>
 
     <div class="post-preview">
-        <time>March 06, 2022</time>
-        <a href="/blog/hello-world/" class="title">Hello World</a>
-        <p class="desc">Test for the markdown renderer</p>
-        <div class="tags"><a href="/blog/tags/meta/">meta</a><a href="/blog/tags/personal/">personal</a></div>
-        <hr>
+        <a href="/blog/0000-hello-world/" class="title">Hello World</a>
+        <span class="desc">Test for the markdown renderer</span>
+
+        <div class="tags"><a href="/blog/tags/meta/">meta</a></div>
+    </div>
+
+</li><li>
+
+    <div class="post-preview">
+        <a href="/blog/0001-keeping-the-web-fun/" class="title">Keeping the Web Fun</a>
+        <span class="desc">A dive into indie web</span>
+
+        <div class="tags"><a href="/blog/tags/indie-web/">indie web</a><a href="/blog/tags/meta/">meta</a></div>
     </div>
 
 </li></ul>
@@ -54,9 +62,8 @@
     <footer>
   <div class="content">
     <p>
-      Made with <a href="https://www.11ty.dev/">Eleventy</a>.
-      Source code can be found on <a href="https://github.com/cohnon/cohnon.github.io">Github</a>.</p>
-    <p>updated on Tue Apr 08 2025</p>
+      Source code can be found on <a href="https://github.com/cohnon/cohnon.github.io">Github</a>.
+    </p>
   </div>
 </footer>
 

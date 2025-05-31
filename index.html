@@ -21,14 +21,14 @@
             <li ><a href="/me">/me</a></li>
         </ul>
     </nav>
-    <a id="theme" onclick="toggleTheme()">
+    <button id="theme" onclick="toggleTheme()">
         <svg>
             <circle cx="14" cy="14" r="8"></circle>
             <circle cx="14" cy="14" r="12">
                 <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 14 14" to="360 14 14" dur="8s" repeatCount="indefinite"></animateTransform>
             </circle>
 	</svg>
-    </a>
+    </button>
 </header>
 
     
@@ -37,43 +37,75 @@
 
 
 <main id="home">
+    <div id="warning">best viewed on desktop :)</div>
     <div id="intro">
-        <div id="text" class="shadow">
-            <a href="#">hello there</a>
-            <img
-                class="pixelated"
-                src="home/intro.webp"
-                style="position:absolute;right:0; bottom:0">
+        <div id="text">
+            <div id="box" class="shadow">
+                <p>hello there</p>
+                <p>this site is undergoing major renovations</p>
+                <br>
+                <p style="background:var(--background)">please be patient <3</p>
+                <img
+                    src="/home/intro.webp"
+                    class="pixelated"
+                    style="position:absolute;right:0; bottom:0;z-index:-1">
+            </div>
+
+            <img src="/home/short_walk.gif" class="pixelated vmarg" style="width:100%">
+
+            <div id="birb-banner"></div>
         </div>
-        
+
         <aside>
-            <time id="clock">08:44:25</time>
+            <div id="loc" class="smbol">
+                <time id="clock">??:??:??</time>
+                <p id="temp">??°C</p>
+                <p id="code">??</p>
+            </div>
+
+            <div class="vmarg">
+                <h2 class="smbol"><a href="/blog">recent blog posts</a> ↴</h2>
+                <ul><li class="ellipsis sm">
+                            
+                                [draft]
+                            
+                            <a href="/blog/0001-keeping-the-web-fun/">Keeping the Web Fun</a>
+                        </li><li class="ellipsis sm">
+                            
+                            <a href="/blog/0000-hello-world/">Hello World</a>
+                        </li></ul>
+            </div>
+
             <div class="stripes"></div>
 
-            <label id="recent-posts">recent posts</label>
-            <ul><li class="ellipsis">
-                        
-                            [draft]
-                        
-                        <a href="/blog/fir/0000_making_a_backend/">FIR - Making A Backend</a>
-                    </li><li class="ellipsis">
-                        
-                        <a href="/blog/hello-world/">Hello World</a>
-                    </li></ul>
-
-            <label id="listening-to">♫ listening to ♫</label>
-            
+            <div class="brdr shadow" style="display:flex;flex-direction:column;align-items:center">
+                <img src="/home/kitty_tunes.gif" class="pixelated" width="100px" alt="kitty_tunes">
+                <p class="smbol vmarg">♫ 何を聞いているの ? ♫</p>
+                
     <div class="marquee">
         <ul><li>[cosmo sheldrake]</li><li>[stars]</li><li>[alec benjamin]</li><li>[creepy nuts]</li><li>[yoe mase]</li><li>[king gizzard and the lizard wizard]</li><li>[andrew prahlow]</li><li>[stupendium]</li><li>[azali]</li><li>[ado]</li><li>[eve]</li><li>[c418]</li><li>[dirt poor robins]</li><li>[poor man&#39;s poison]</li><li>[major axis]</li><li>[gourski]</li><li>[machine girl]</li><li>[zalinki]</li><li>[miracle musical]</li></ul>
 
         <ul aria-hidden="true"><li>[cosmo sheldrake]</li><li>[stars]</li><li>[alec benjamin]</li><li>[creepy nuts]</li><li>[yoe mase]</li><li>[king gizzard and the lizard wizard]</li><li>[andrew prahlow]</li><li>[stupendium]</li><li>[azali]</li><li>[ado]</li><li>[eve]</li><li>[c418]</li><li>[dirt poor robins]</li><li>[poor man&#39;s poison]</li><li>[major axis]</li><li>[gourski]</li><li>[machine girl]</li><li>[zalinki]</li><li>[miracle musical]</li></ul>
     </div>
 
+                <audio controls style="width:100%">
+                    <source src="/home/meow.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <iframe width="180" height="180" id="navlink" class="vmarg" style="border:none" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
+            <div class="brdr vmarg shadow">
+                <p class="smbol">the button :o</p>
+                <a href="https://cohnon.com" target="_blank"><img src="/home/button.gif" class="pixelated" width="88px" alt="cohnon"></a>
+                <textarea readonly="" style="font-size:1em"><a href="https://cohnon.com" target="_blank"><img src="/home/button.gif" style="image-rendering:pixelated" width="88px" alt="cohnon"></a></textarea>
+            </div>
         </aside>
     </div>
-    <div id="birb-banner"></div>
 
-    <h2>↴ <a href="/projects">what I'm working on</a></h2>
+
+    <hr>
+    
+    <h2 class="smbol vmarg"><a href="/projects">what I'm working on</a> ↴</h2>
     <ul id="project-showcase">
         <li>
 
@@ -113,7 +145,7 @@
         
     </ul>
 
-    <h2><a href="/bits">bits and bobs</a> ↴</h2>
+    <h2 class="smbol"><a href="/bits">bits</a> ↴</h2>
     <ul id="bits-and-bobs">
         
             <li>
@@ -202,6 +234,22 @@
 </li>
         
     </ul>
+
+    <div id="construction">
+        <img src="/home/cat-spin.gif">
+        <p>This site is forever under construction</p>
+    </div>
+
+    <div id="btns" class="vmarg" style="display:flex;justify-content:space-between;flex-wrap:wrap">
+        <img src="/home/footer/button.gif">
+        <img src="/home/footer/best_viewed_with_eyes.gif">
+        <img src="/home/footer/classicgaming.gif">
+        <img src="/home/footer/macmade.gif">
+        <img src="/home/footer/getmozilla2.gif">
+        <img src="/home/footer/html_learn_it_today.gif">
+        <img src="/home/footer/best_show_time_for_your_life.gif">
+        <img src="/home/footer/javass.gif">
+    <div>
 </main>
 
 <script src="/js/clock.js"></script>
@@ -211,9 +259,8 @@
     <footer>
   <div class="content">
     <p>
-      Made with <a href="https://www.11ty.dev/">Eleventy</a>.
-      Source code can be found on <a href="https://github.com/cohnon/cohnon.github.io">Github</a>.</p>
-    <p>updated on Tue Apr 08 2025</p>
+      Source code can be found on <a href="https://github.com/cohnon/cohnon.github.io">Github</a>.
+    </p>
   </div>
 </footer>
 

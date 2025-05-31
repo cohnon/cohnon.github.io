@@ -21,26 +21,29 @@
             <li ><a href="/me">/me</a></li>
         </ul>
     </nav>
-    <a id="theme" onclick="toggleTheme()">
+    <button id="theme" onclick="toggleTheme()">
         <svg>
             <circle cx="14" cy="14" r="8"></circle>
             <circle cx="14" cy="14" r="12">
                 <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 14 14" to="360 14 14" dur="8s" repeatCount="indefinite"></animateTransform>
             </circle>
 	</svg>
-    </a>
+    </button>
 </header>
 
     
     <main id="blog-post">
     <article>
-      <time>March 06, 2022</time>
       <h1>Hello World</h1>
-      <div class="tags"><a href="/blog/tags/meta/" class="tag-item">meta</a><a href="/blog/tags/personal/" class="tag-item">personal</a></div>
+      <time>March 06, 2022</time>
+      <div class="tags"><a href="/blog/tags/meta/" class="tag-item">meta</a></div>
 
-      <p>How exciting.</p>
-<p>Some markdown styling that I can use are:</p>
-<p><em>Italict</em>, <strong>Bold</strong>, <em><strong>Both</strong></em>, <code>monospace</code></p>
+      <h5 id="%22wow%2C-another-useless-website-with-a-single-blog-post-talking-about-itself%22" tabindex="-1"><a class="header-anchor" href="#%22wow%2C-another-useless-website-with-a-single-blog-post-talking-about-itself%22"><span>&quot;wow, another useless website with a single blog post talking about itself&quot;</span></a></h5>
+<p><img src="/blog/hello-world/useless.webp" alt="another useless website"></p>
+<p>Yes it's cliche. No that won't stop me.</p>
+<h2 id="markdown-tests" tabindex="-1"><a class="header-anchor" href="#markdown-tests"><span>Markdown Tests</span></a></h2>
+<p>We've got the classics:
+<em>Italict</em>, <strong>Bold</strong>, <em><strong>Both</strong></em>, <code>monospace</code></p>
 <ul>
 <li>Unordered</li>
 <li>Lists</li>
@@ -49,7 +52,7 @@
 <li>Ordered</li>
 <li>Lists
 <ul>
-<li>Event</li>
+<li>Even</li>
 <li>Nested Lists</li>
 </ul>
 </li>
@@ -71,9 +74,8 @@
 </tr>
 </tbody>
 </table>
-<p>and here's a <a href="https://www.duckduckgo.com">link</a>.</p>
-<h2 id="weird-markdown" tabindex="-1"><a class="header-anchor" href="#weird-markdown"><span>Weird Markdown</span></a></h2>
-<p>There are a lot more markdown features than I thought.</p>
+<p>and here's a <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">link</a>.</p>
+<h2 id="yay%2C-cooooooode-!!" tabindex="-1"><a class="header-anchor" href="#yay%2C-cooooooode-!!"><span>Yay, Cooooooode !!</span></a></h2>
 <pre><code class="language-js">const codeBlocks = areSoEasyToMake({
   thatIts: 'Silly',
 });
@@ -88,15 +90,9 @@ int main()
   return 0
 }
 </code></pre>
-<h3 id="some-side-note" tabindex="-1"><a class="header-anchor" href="#some-side-note"><span>Some Side Note</span></a></h3>
-<p>Wow this is a whole new area</p>
-<h3 id="back-to-your-regularly-scheduled-blog-post" tabindex="-1"><a class="header-anchor" href="#back-to-your-regularly-scheduled-blog-post"><span>Back to Your Regularly Scheduled Blog Post</span></a></h3>
+<p>And you can't go wrong with</p>
 <blockquote>
-<p>Block quotes that make blocky quotes.</p>
-<blockquote>
-<p>And even more blocky and quotier quotes</p>
-</blockquote>
-<p>amazing</p>
+<p>&quot;Block quotes that make blocky quotes.&quot;</p>
 </blockquote>
 <p>Here's a kitten</p>
 <p><img src="/blog/hello-world/kitten.png" alt="Picture of a kitten"></p>
@@ -118,9 +114,8 @@ int main()
     <footer>
   <div class="content">
     <p>
-      Made with <a href="https://www.11ty.dev/">Eleventy</a>.
-      Source code can be found on <a href="https://github.com/cohnon/cohnon.github.io">Github</a>.</p>
-    <p>updated on Tue Apr 08 2025</p>
+      Source code can be found on <a href="https://github.com/cohnon/cohnon.github.io">Github</a>.
+    </p>
   </div>
 </footer>
 
