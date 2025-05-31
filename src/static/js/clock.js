@@ -26,7 +26,7 @@ const tempElement = document.getElementById("temp");
 const codeElement = document.getElementById("code");
 
 const lat = 49.1666;
-const lon = 123.1336;
+const lon = -123.1336;
 const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code`;
 
 const weather_codes = {
