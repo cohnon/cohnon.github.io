@@ -1,15 +1,14 @@
 {% macro postPreview(post) %}
 
     <div class="post-preview">
-        <time>{{ post.data.date | formatDate }}</time>
         <a href="{{ post.url }}" class="title">{{ post.data.title }}</a>
-        <p class="desc">{{ post.data.desc }}</p>
+        <span class="desc">{{ post.data.desc }}</span>
+
         <div class="tags">
             {%- for tagItem in post.data.tags | filterTagList -%}
                 <a href="/blog/tags/{{ tagItem | slugify }}/">{{ tagItem }}</a>
             {%- endfor -%}
         </div>
-        <hr>
     </div>
 
 {% endmacro %}

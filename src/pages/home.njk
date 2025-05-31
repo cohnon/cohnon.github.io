@@ -7,43 +7,75 @@ permalink: /
 {% from 'macros/marquee.njk' import marquee %}
 
 <main id="home">
+    <div id="warning">best viewed on desktop :)</div>
     <div id="intro">
-        <div id="text" class="shadow">
-            <a href="#">hello there</a>
-            <img
-                class="pixelated"
-                src="home/intro.webp"
-                style="position:absolute;right:0; bottom:0">
+        <div id="text">
+            <div id="box" class="shadow">
+                <p>hello there</p>
+                <p>this site is undergoing major renovations</p>
+                <br>
+                <p style="background:var(--background)">please be patient <3</p>
+                <img
+                    src="/home/intro.webp"
+                    class="pixelated"
+                    style="position:absolute;right:0; bottom:0;z-index:-1">
+            </div>
+
+            <img src="/home/short_walk.gif" class="pixelated vmarg" style="width:100%">
+
+            <div id="birb-banner"></div>
         </div>
-        
+
         <aside>
-            <time id="clock">08:44:25</time>
+            <div id="loc" class="smbol">
+                <time id="clock">??:??:??</time>
+                <p id="temp">??°C</p>
+                <p id="code">??</p>
+            </div>
+
+            <div class="vmarg">
+                <h2 class="smbol"><a href="/blog">recent blog posts</a> ↴</h2>
+                <ul>
+                    {%- for post in collections.blog | head(-5) -%}
+                        <li class="ellipsis sm">
+                            {% if post.data.draft == true %}
+                                [draft]
+                            {% endif %}
+                            <a href="{{ post.url }}">{{ post.data.title }}</a>
+                        </li>
+                    {%- endfor -%}
+                </ul>
+            </div>
+
             <div class="stripes"></div>
 
-            <label id="recent-posts">recent posts</label>
-            <ul>
-                {%- for post in collections.blog | head(-5) -%}
-                    <li class="ellipsis">
-                        {% if post.data.draft == true %}
-                            [draft]
-                        {% endif %}
-                        <a href="{{ post.url }}">{{ post.data.title }}</a>
-                    </li>
-                {%- endfor -%}
-            </ul>
+            <div class="brdr shadow" style="display:flex;flex-direction:column;align-items:center">
+                <img src="/home/kitty_tunes.gif" class="pixelated" width="100px" alt="kitty_tunes">
+                <p class="smbol vmarg">♫ 何を聞いているの ? ♫</p>
+                {{ marquee([
+                    "cosmo sheldrake", "stars", "alec benjamin", "creepy nuts", "yoe mase",
+                    "king gizzard and the lizard wizard", "andrew prahlow", "stupendium", "azali",
+                    "ado", "eve", "c418", "dirt poor robins", "poor man's poison",
+                    "major axis", "gourski", "machine girl", "zalinki", "miracle musical"
+                ]) }}
+                <audio controls style="width:100%">
+                    <source src="/home/meow.mp3" type="audio/mpeg">
+                </audio>
+            </div>
 
-            <label id="listening-to">♫ listening to ♫</label>
-            {{ marquee([
-                "cosmo sheldrake", "stars", "alec benjamin", "creepy nuts", "yoe mase",
-                "king gizzard and the lizard wizard", "andrew prahlow", "stupendium", "azali",
-                "ado", "eve", "c418", "dirt poor robins", "poor man's poison",
-                "major axis", "gourski", "machine girl", "zalinki", "miracle musical"
-            ]) }}
+            <iframe width="180" height="180" id="navlink" class="vmarg" style="border:none" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
+            <div class="brdr vmarg shadow">
+                <p class="smbol">the button :o</p>
+                <a href="https://cohnon.com" target="_blank"><img src="/home/button.gif" class="pixelated" width="88px" alt="cohnon"></a>
+                <textarea readonly="" style="font-size:1em"><a href="https://cohnon.com" target="_blank"><img src="/home/button.gif" style="image-rendering:pixelated" width="88px" alt="cohnon"></a></textarea>
+            </div>
         </aside>
     </div>
-    <div id="birb-banner"></div>
 
-    <h2>↴ <a href="/projects">what I'm working on</a></h2>
+
+    <hr>
+    
+    <h2 class="smbol vmarg"><a href="/projects">what I'm working on</a> ↴</h2>
     <ul id="project-showcase">
         {% for project in collections.projects | sortByOrder %}
             {%- if project.data.order >= 100 -%}
@@ -52,12 +84,28 @@ permalink: /
         {% endfor %}
     </ul>
 
-    <h2><a href="/bits">bits and bobs</a> ↴</h2>
+    <h2 class="smbol"><a href="/bits">bits</a> ↴</h2>
     <ul id="bits-and-bobs">
         {% for bit in collections.bits | head(-10) %}
             <li>{{ bitPreview(bit) }}</li>
         {% endfor %}
     </ul>
+
+    <div id="construction">
+        <img src="/home/cat-spin.gif">
+        <p>This site is forever under construction</p>
+    </div>
+
+    <div id="btns" class="vmarg" style="display:flex;justify-content:space-between;flex-wrap:wrap">
+        <img src="/home/footer/button.gif">
+        <img src="/home/footer/best_viewed_with_eyes.gif">
+        <img src="/home/footer/classicgaming.gif">
+        <img src="/home/footer/macmade.gif">
+        <img src="/home/footer/getmozilla2.gif">
+        <img src="/home/footer/html_learn_it_today.gif">
+        <img src="/home/footer/best_show_time_for_your_life.gif">
+        <img src="/home/footer/javass.gif">
+    <div>
 </main>
 
 <script src="/js/clock.js"></script>

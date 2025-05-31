@@ -8,12 +8,12 @@
             <li {{ 'class=active' if '/me' in page.url }}><a href="/me">/me</a></li>
         </ul>
     </nav>
-    <a id="theme" onclick="toggleTheme()">
+    <button id="theme" onclick="toggleTheme()">
         <svg>
             <circle cx="14" cy="14" r="8"></circle>
             <circle cx="14" cy="14" r="12">
                 <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 14 14" to="360 14 14" dur="8s" repeatCount="indefinite"></animateTransform>
             </circle>
 	</svg>
-    </a>
+    </button>
 </header>

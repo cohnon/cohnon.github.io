@@ -4,12 +4,16 @@ date: 2022-03-06
 desc: Test for the markdown renderer
 tags:
   - meta
-  - personal
 ---
-How exciting.
 
-Some markdown styling that I can use are:
+##### "wow, another useless website with a single blog post talking about itself"
+![another useless website](/blog/hello-world/useless.webp)
 
+Yes it's cliche. No that won't stop me.
+
+## Markdown Tests
+
+We've got the classics:
 *Italict*, **Bold**, ***Both***, ```monospace```
 
 - Unordered
@@ -17,7 +21,7 @@ Some markdown styling that I can use are:
 
 1. Ordered
 2. Lists
-    - Event
+    - Even
     - Nested Lists
 3. Work
 
@@ -25,11 +29,9 @@ Some markdown styling that I can use are:
 |--------|-------|------|
 | pretty | darn  | cool |
 
-and here's a [link](https://www.duckduckgo.com).
+and here's a [link](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
 
-## Weird Markdown
-
-There are a lot more markdown features than I thought.
+## Yay, Cooooooode !!
 
 ```js
 const codeBlocks = areSoEasyToMake({
@@ -49,16 +51,9 @@ int main()
 }
 ```
 
-### Some Side Note
+And you can't go wrong with
 
-Wow this is a whole new area
-
-### Back to Your Regularly Scheduled Blog Post
-
-> Block quotes that make blocky quotes.
-> > And even more blocky and quotier quotes
->
-> amazing
+> "Block quotes that make blocky quotes."
 
 Here's a kitten
 

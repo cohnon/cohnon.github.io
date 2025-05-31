@@ -3,8 +3,8 @@ layout: base
 ---
 <main id="blog-post">
     <article>
-      <time>{{ date | formatDate }}</time>
       <h1>{{ title }}</h1>
+      <time>{{ date | formatDate }}</time>
       <div class="tags">
         {%- for tagItem in tags | filterTagList -%}
           <a href="/blog/tags/{{ tagItem | slugify }}/" class="tag-item">{{ tagItem }}</a>
